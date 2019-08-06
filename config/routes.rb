@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :walks
   resources :landmarks
   
-  root to: "home#index"
+  get '*path', to: 'pages#root', constraints: ->(request){ request.format.html? }
+  root to: "pages#root"
 end
