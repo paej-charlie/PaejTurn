@@ -44,7 +44,6 @@ class Map extends React.Component {
                   <Marker position={[{lat}, {long}]}>
                     <Popup>
                       {name}
-                      {info}
                     </Popup>
                   </Marker>
                 )
