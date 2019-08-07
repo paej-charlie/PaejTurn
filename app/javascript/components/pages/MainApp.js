@@ -1,12 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
-class Nav extends React.Component {
+
+import Header from "./Header"
+
+class MainApp extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <Header />
       </React.Fragment>
     );
   }
 }
 
-export default Nav
+export default MainApp
