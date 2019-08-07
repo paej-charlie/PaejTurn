@@ -25,7 +25,7 @@ class TripsController < ApplicationController
     def destroy
         @trip = current_user.trips.find params[:id]
         if @trip.destroy
-            render json: @walk 
+            render json: @trip
         else
             render json: {error: 'could not destroy'}, status: 400
         end 
@@ -34,7 +34,7 @@ class TripsController < ApplicationController
     private
     
     def trip_params
-        params.require(:trip).permit(:walk_id, :review, :completed)
+        params.require(:trip).permit(:review, :completed)
     end 
     
 end

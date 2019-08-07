@@ -1,5 +1,5 @@
 class WalksController < ApplicationController
-    before_action :authenticate_user!, only: [:landmarks]
+    before_action :authenticate_user!, only: [:show]
     
     def index 
         @walks = Walk.all
@@ -7,11 +7,6 @@ class WalksController < ApplicationController
     end 
     
     def show
-        @walk = current_user.walks.find params[:id]
-        render json: @walk
-    end 
-    
-    def landmarks
         @walk = Walk.find params[:id]
         render json: @walk.to_json({:include => :landmarks})
     end 
