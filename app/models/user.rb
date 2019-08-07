@@ -3,4 +3,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   has_many :walks, through: :trips
+  has_many :landmarks, through: :favorites
 end
