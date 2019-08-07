@@ -18,6 +18,6 @@ class FavoritesController < ApplicationController
     private
     
     def favorite_params
-        params.require(:favorite).permit(walk_id)
+        params.require(:favorite).permit(:walk_id)
     end 
 end
