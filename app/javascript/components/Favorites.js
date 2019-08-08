@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-class Footer extends React.Component {
+class Favorites extends React.Component {
   render () {
     return (
       <React.Fragment>
@@ -10,4 +10,4 @@ class Footer extends React.Component {
   }
 }
 
-export default Footer
+export default Favorites
