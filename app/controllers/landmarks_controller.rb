@@ -5,5 +5,4 @@ class LandmarksController < ApplicationController
         @landmarks = Landmark.all
         render json: @landmarks
     end 
-    
 end
