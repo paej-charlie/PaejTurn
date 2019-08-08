@@ -28,8 +28,8 @@ class MapView extends React.Component {
     const { markers } = this.state
     console.log(markers)
     return (
-      <React.Fragment>
-      <h1>Map</h1>
+      <div className="mapView">
+      <div className="map">
       <LeafletMap
         center={[32.8, -117]}
         zoom={6}
@@ -57,7 +57,24 @@ class MapView extends React.Component {
                 )
               })}
       </LeafletMap>
-      </React.Fragment>
+      </div>
+      <h2>On this walk:</h2>
+      <ul className="list-group list-group-flush mapUl">
+        <li className="list-group-item">Landmark name</li>
+        <li className="list-group-item">Landmark name</li>
+        <li className="list-group-item">Landmark name</li>
+        <li className="list-group-item">Landmark name</li>
+        <li className="list-group-item">Landmark name</li>
+      </ul>
+      <h2>Directions:</h2>
+      <ul className="list-group list-group-flush mapUl">
+        <li className="list-group-item">Direction</li>
+        <li className="list-group-item">Direction</li>
+        <li className="list-group-item">Direction</li>
+        <li className="list-group-item">Direction</li>
+        <li className="list-group-item">Direction</li>
+      </ul>
+      </div>
     );
   }
 }
