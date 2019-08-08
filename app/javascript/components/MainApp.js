@@ -9,7 +9,6 @@
    render () {
      return (
       <React.Fragment>
-      <Nav />
         <Jumbotron className="headerJumbo">
           <h1>History in Motion</h1>
         </Jumbotron>

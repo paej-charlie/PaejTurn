@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 
-class Map extends React.Component {
+class MapView extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -12,18 +12,24 @@ class Map extends React.Component {
   }
   
   getMarkers = () => {
+    const { markers } = this.state
     fetch("/landmarks")
     .then( response => {
       return response.json()
     })
-    .then( apartments => {
+    .then( markers => {
       this.setState({markers})
+      
     })
-    console.log(this.state)
+    
   }
   
   render() {
+    const { markers } = this.state
+    console.log(markers)
     return (
+      <React.Fragment>
+      <h1>Map</h1>
       <LeafletMap
         center={[32.8, -117]}
         zoom={6}
@@ -39,18 +45,23 @@ class Map extends React.Component {
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-        {this.state.markers.map((marker, index) =>{
+        {markers.map((marker, index) =>{
+          let lat = marker.latitude
+          let long = marker.longitude
               return (
-                  <Marker position={[{lat}, {long}]}>
+                  <Marker position={[lat, long]}>
                     <Popup>
-                      {name}
+                      {marker.title}
                     </Popup>
                   </Marker>
                 )
               })}
       </LeafletMap>
+      </React.Fragment>
     );
   }
 }
 
-export default Map
+export default MapView
+
+
