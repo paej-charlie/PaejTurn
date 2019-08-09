@@ -72,3 +72,26 @@ walk_attributes = [
 walk_attributes.each do |attributes|
  Walk.find_or_create_by(attributes)
 end
+
+stop_attributes = [
+    {
+        landmark_id: 1,
+        walk_id: 1,
+    },
+    {
+        landmark_id: 2,
+        walk_id: 1,
+    },
+    {
+        landmark_id: 3,
+        walk_id: 1,
+    },
+    {
+        landmark_id: 4,
+        walk_id: 2,
+    }
+]
+
+stop_attributes.each do |attributes|
+    Stop.find_or_create_by(attributes)
+end 
