@@ -13,7 +13,7 @@
 #         alcohol: false,
 #         latitude: ,
 #         longitude:,
-#         image
+#         image:
 #     },
 #     {
 #         title:,
@@ -24,7 +24,7 @@
 #         alcohol:,
 #         latitude:,
 #         longitude:,
-#         image
+#         image:
 #     },
 #     {
 #         title:,
@@ -35,7 +35,7 @@
 #         alcohol:,
 #         latitude:,
 #         longitude:,
-#         image
+#         image:
 #     },
 #     {
 #         title:,
@@ -46,7 +46,7 @@
 #         alcohol:,
 #         latitude:,
 #         longitude:,
-#         image
+#         image:
 #     },
 # ]
 
