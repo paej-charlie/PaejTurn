@@ -16,6 +16,12 @@ import {
 
 class Header extends React.Component {
   render () {
+    const{ 
+      logged_in, 
+      sign_out_route, 
+      sign_in_route,
+      current_user_id,
+    } = this.props
     return (
       <React.Fragment>
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,15 +35,31 @@ class Header extends React.Component {
                       <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/walks">Guided Tours</a>
-                    </li>
-                    <li class="nav-item">
                       <a class="nav-link" href="/landmarks">Landmarks</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/favorites">My Favorites</a>
+                      {logged_in &&
+                        <a class="nav-link" href="/walks">Guided Tours</a>
+                      }
+                    </li>
+                    <li class="nav-item">
+                      {logged_in &&
+                        <a class="nav-link" href="/favorites">My Favorites</a>
+                      }
                     </li>
                   </ul>
+                  <div className = "logger">
+                    {logged_in &&
+                      <div>
+                        <a href={sign_out_route}>Log Out</a>
+                      </div>
+                    }
+                    {!logged_in &&
+                      <div>
+                        <a href={sign_in_route}>Log In</a>
+                      </div>
+                    }
+                  </div>
                 </div>
             </nav>
       </React.Fragment>
