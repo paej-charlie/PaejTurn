@@ -6,15 +6,39 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
+
 import {
-    Navbar,
-    Nav,
-    Form,
-    FormControl,
-    Button
-} from 'reactstrap';
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Form,
+  FormControl } from 'reactstrap';
 
 class Header extends React.Component {
+    constructor(props) {
+    super(props);
+    
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  
+  
   render () {
     const{ 
       logged_in, 
@@ -22,46 +46,43 @@ class Header extends React.Component {
       sign_in_route,
       current_user_id,
     } = this.props
+    
     return (
       <React.Fragment>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">HiM</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/landmarks">Landmarks</a>
-                    </li>
-                    <li class="nav-item">
+        <div>
+          <Navbar color="light" light expand="md">
+            <NavbarBrand href="/">HiM</NavbarBrand>
+              <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                  <Nav className="ml-auto" navbar>
+                    <NavItem>
+                      <NavLink href="/landmarks">Landmarks</NavLink>
+                    </NavItem>
+                    
+                    <NavItem>
                       {logged_in &&
-                        <a class="nav-link" href="/walks">Guided Tours</a>
+                      <NavLink href="/walks">Guided Tours</NavLink>
                       }
-                    </li>
-                    <li class="nav-item">
+                    </NavItem>
+                    
+                    <NavItem>
                       {logged_in &&
-                        <a class="nav-link" href="/favorites">My Favorites</a>
+                      <NavLink href="/favorites">Favorites</NavLink>
                       }
-                    </li>
-                  </ul>
-                  <div className = "logger">
-                    {logged_in &&
-                      <div>
-                        <a href={sign_out_route}>Log Out</a>
-                      </div>
-                    }
-                    {!logged_in &&
-                      <div>
-                        <a href={sign_in_route}>Log In</a>
-                      </div>
-                    }
-                  </div>
-                </div>
-            </nav>
+                    </NavItem>
+                    
+                    <NavItem>
+                      {logged_in &&
+                        <NavLink href={sign_out_route}>Log Out</NavLink>
+                      }
+                      {!logged_in &&
+                        <NavLink href={sign_in_route}>Log In</NavLink>
+                      }
+                    </NavItem>
+                  </Nav>
+                </Collapse>
+              </Navbar>
+          </div>
       </React.Fragment>
     );
   }
