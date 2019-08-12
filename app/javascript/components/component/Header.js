@@ -56,18 +56,18 @@ class Header extends React.Component {
                 <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="/landmarks">Landmarks</NavLink>
+                      <NavLink href="Landmarks">Landmarks</NavLink>
                     </NavItem>
                     
                     <NavItem>
                       {logged_in &&
-                      <NavLink href="/walks">Guided Tours</NavLink>
+                      <NavLink href="Walks">Guided Tours</NavLink>
                       }
                     </NavItem>
                     
                     <NavItem>
                       {logged_in &&
-                      <NavLink href="/favorites">Favorites</NavLink>
+                      <NavLink href="Favorites">Favorites</NavLink>
                       }
                     </NavItem>
                     
