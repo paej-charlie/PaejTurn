@@ -4,7 +4,8 @@ import {
  BrowserRouter as Router, 
  Link,
  Route, 
- Switch
+ Switch,
+ Redirect,
 } from 'react-router-dom'
  
 import { Jumbotron } from 'reactstrap'
