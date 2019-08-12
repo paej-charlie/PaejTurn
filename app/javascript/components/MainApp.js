@@ -6,7 +6,6 @@
   Route, 
   Switch
 } from 'react-router-dom'
- 
  import Header from "./Header"
  import { Jumbotron } from 'reactstrap'
  import MapView from './MapView'
