@@ -7,15 +7,6 @@ import {
  Switch
 } from 'react-router-dom'
  
-<<<<<<< HEAD
- import Header from "./Header"
- import { Jumbotron } from 'reactstrap'
- import MapView from './MapView'
- 
- import Landmarks from './Landmarks'
- import Walks from './Walks'
- import Footer from './Footer'
-=======
 import { Jumbotron } from 'reactstrap'
 
 import Header from './component/Header'
@@ -25,7 +16,6 @@ import MapView from './page/MapView'
 import Landmarks from './page/Landmarks'
 import Walks from './page/Walks'
 import Favorites from './page/Favorites'
->>>>>>> master
  
  
 class MainApp extends React.Component {
@@ -95,22 +85,6 @@ class MainApp extends React.Component {
        } = this.state
        
      return (
-<<<<<<< HEAD
-      <React.Fragment>
-      <Header 
-        logged_in = { logged_in }
-        sign_in_route = { sign_in_route }
-        sign_out_route= { sign_out_route }
-      />
-        <Jumbotron className="headerJumbo">
-          <h1>History in Motion</h1>
-        </Jumbotron>
-        <MapView />
-        <Landmarks />
-        <Footer />
-    </React.Fragment>
-    )
-=======
        <React.Fragment>
          <Header 
            logged_in = { logged_in }
@@ -142,9 +116,9 @@ class MainApp extends React.Component {
              <Route path="/Favorites" exact component={Favorites} />
            </Switch>
          </Router>
+         <Footer />
        </React.Fragment>
      )
->>>>>>> master
    }
 }
 
