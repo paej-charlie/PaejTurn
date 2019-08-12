@@ -117,6 +117,7 @@ class MainApp extends React.Component {
              <Route path="/Favorites" exact component={Favorites} />
            </Switch>
          </Router>
+         <Footer />
        </React.Fragment>
      )
    }
