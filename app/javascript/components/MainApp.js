@@ -13,6 +13,7 @@
  
  import Landmarks from './Landmarks'
  import Walks from './Walks'
+ import Footer from './Footer'
  
  
  class MainApp extends React.Component {
@@ -35,6 +36,7 @@
         </Jumbotron>
         <MapView />
         <Landmarks />
+        <Footer />
     </React.Fragment>
     )
    }
