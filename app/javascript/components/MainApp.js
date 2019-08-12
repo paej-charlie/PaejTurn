@@ -11,6 +11,7 @@ import { Jumbotron } from 'reactstrap'
 
 import Header from './component/Header'
 import Footer from './component/Footer'
+
 import Home from './page/Home'
 import MapView from './page/MapView'
 import Landmarks from './page/Landmarks'
