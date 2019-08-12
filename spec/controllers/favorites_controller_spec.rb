@@ -14,6 +14,7 @@ require 'rails_helper'
 # end
 
 describe "Favorites Controller", type: :request do
+    # //TODO added Index method to Favorites Controller - but test isn't reading the test data I've set.  Moving on to Create.//
     it "creates a favorite" do
         favorite_params = {
           walk: {
@@ -22,5 +23,5 @@ describe "Favorites Controller", type: :request do
         }
         post '/favorites', params: favorite_params
         expect(response).to have_http_status(:found)
-      end
-end 
+    end
+  end 
