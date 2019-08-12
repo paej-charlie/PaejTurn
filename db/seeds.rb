@@ -52,13 +52,13 @@ end
 walk_attributes = [
     {
         name: 'Historical Sites',
-        length: '2.5 miles',
+        distance: '2.5 miles',
         duration: 'About 1.5 hours',
         alcohol: false
     },
     {
         name: 'The Booze Cruze',
-        length: '1.75 miles',
+        distance: '1.75 miles',
         duration: '3+ hours',
         alcohol: true
     }
