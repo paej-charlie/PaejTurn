@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Card, CardHeader, CardImg, CardBody,
-  CardTitle, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Card, CardHeader, CardImg, CardBody, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
   
 class Cards extends React.Component {
       constructor(props) {
