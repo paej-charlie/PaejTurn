@@ -1,9 +1,27 @@
 import React from "react"
 
 class Landmarks extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            landmarks: []
+        }
+        this.getLandmarks()
+    }
     
+    getLandmarks = () => {
+        const { landmarks } = this.state
+        fetch("/landmarks")
+        .then( response => {
+            return response.json()
+        })
+        .then( landmarks => {
+            this.setState({landmarks})
+        })
+    }
+  
     render () {
-        const { landmarks } = this.props
+        const { landmarks } = this.state
         console.log(landmarks)
             return (
               <React.Fragment>
