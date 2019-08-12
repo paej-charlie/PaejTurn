@@ -4,29 +4,38 @@ import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 
 class MapView extends React.Component {
   constructor(props){
-    super(props)
-    this.state = {
-      markers: []
-    }
-    this.getMarkers()
+      super(props)
+      this.state = {
+          markers: {
+            landmarks: []
+          }
+      }
+      this.getMarkers(props.match.params.id)
   }
   
-  getMarkers = () => {
-    const { markers } = this.state
-    fetch("/landmarks")
-    .then( response => {
-      return response.json()
-    })
-    .then( markers => {
-      this.setState({markers})
-      
-    })
+  getMarkers = (id) => {
+      const { markers } = this.state
+      fetch(`/walks/${id}`)
+      .then( response => {
+          console.log(response)
+          return response.json()
+      })
+      .then( markers => {
+          console.log(markers)
+          this.setState({markers})
+      })
+  }  
     
-  }
-  
   render() {
     const { markers } = this.state
     console.log(markers)
+    if(markers == undefined){
+      return(
+          <div>
+            Loading
+          </div>
+        )
+    }
     return (
       <div className="mapView">
       <div className="map">
@@ -43,9 +52,9 @@ class MapView extends React.Component {
         easeLinearity={0.35}
       >
         <TileLayer
-          url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-        {markers.map((marker, index) =>{
+        {markers.landmarks.map((marker, index) =>{
           let lat = marker.latitude
           let long = marker.longitude
               return (
@@ -60,11 +69,11 @@ class MapView extends React.Component {
       </div>
       <h2>On this walk:</h2>
       <ul className="list-group list-group-flush mapUl">
-        <li className="list-group-item">Landmark name</li>
-        <li className="list-group-item">Landmark name</li>
-        <li className="list-group-item">Landmark name</li>
-        <li className="list-group-item">Landmark name</li>
-        <li className="list-group-item">Landmark name</li>
+      {markers.landmarks.map((marker, index) => {
+          return(
+              <li className="list-group-item">{marker.title}</li>
+          ) 
+      })}
       </ul>
       <h2>Directions:</h2>
       <ul className="list-group list-group-flush mapUl">
