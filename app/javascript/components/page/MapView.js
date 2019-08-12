@@ -14,11 +14,9 @@ class MapView extends React.Component {
   }
   
   getMarkers = (id) => {
-      console.log('banana ', id)
       const { markers } = this.state
       fetch(`/walks/${id}`)
       .then( response => {
-          console.log('apple')
           console.log(response)
           return response.json()
       })
@@ -73,7 +71,7 @@ class MapView extends React.Component {
       <ul className="list-group list-group-flush mapUl">
       {markers.landmarks.map((marker, index) => {
           return(
-              <li className="list-group-item">Landmark Name</li>
+              <li className="list-group-item">{marker.title}</li>
           ) 
       })}
       </ul>

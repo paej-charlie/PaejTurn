@@ -8,10 +8,7 @@ class WalksController < ApplicationController
     
     def show
         @walk = Walk.find params[:id]
-        test = @walk.to_json({:include => :landmarks})
-        puts 'banana'
-        puts test
-        render json: test
+        render json: @walk.to_json({:include => :landmarks})
     end 
     
 end
