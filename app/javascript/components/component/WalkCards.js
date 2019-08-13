@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Card, CardHeader, CardImg, CardBody,
-  CardTitle, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Card, CardHeader, CardBody, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
   
 class WalkCards extends React.Component {
       constructor(props) {
@@ -27,7 +26,7 @@ class WalkCards extends React.Component {
         <Card className="cardComp" key={walk.id}>
         <CardHeader>{walk.name}</CardHeader>
         <CardBody>
-        <CardImg top width="100%" src="http://placekitten.com/200/150" alt="Card image cap" />
+        <img class="cardImg" src="http://placekitten.com/400/350" alt="Card image cap" />
           <CardText>Distance: {walk.distance} <br /> Duration: {walk.duration}</CardText>
           <a className="btn btn-primary walkBtn" href={`https://2082ac348b8a4bf4abf95c48546ecb63.vfs.cloud9.us-west-2.amazonaws.com/Walk/${walk.id}`}>Start Walk</a>
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="dropDown">
