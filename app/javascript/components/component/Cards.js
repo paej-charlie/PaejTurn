@@ -1,15 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Card, CardHeader, CardImg, CardBody,
-  CardTitle, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Card, CardHeader, CardImg, CardBody, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Button } from 'reactstrap';
   
 class Cards extends React.Component {
-      constructor(props) {
-    super(props);
+    constructor(props) {
+      super(props);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      liked: 'Like'
     };
    
   }
@@ -19,17 +19,25 @@ class Cards extends React.Component {
       dropdownOpen: !prevState.dropdownOpen
     }));
   }
+  
+  likeClick = () => {
+    const { liked } = this.state
+    if(liked === 'Like'){
+      this.setState({liked: 'Liked'})
+    } else {
+      this.setState({liked: 'Like'})
+    }
+  }
 
 
   render () {
     const { landmark } = this.props
-    
     return (
       <React.Fragment>
         <Card className="cardComp">
-        <CardHeader>{landmark.title}</CardHeader>
+        <CardHeader>{landmark.title} <Button onClick={this.likeClick} className="likeIcon" outline color="danger">{ this.state.liked }</Button></CardHeader>
         <CardBody>
-        <CardImg top width="100%" src="http://placekitten.com/200/150" alt="Card image cap" />
+        <img className="cardImg" src="http://placekitten.com/400/350" alt="Card image cap" />
           <CardText>Located at {landmark.address}, {landmark.city}, {landmark.state} {landmark.zip}.</CardText>
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="dropDown">
               <DropdownToggle caret>
