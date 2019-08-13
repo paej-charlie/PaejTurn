@@ -23,7 +23,6 @@ class Landmarks extends React.Component {
     
     render () {
         const { landmarks } = this.state
-        console.log(landmarks)
             return (
               <React.Fragment>
               <h1>Landmarks</h1>

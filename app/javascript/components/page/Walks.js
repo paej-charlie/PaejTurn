@@ -23,14 +23,13 @@ class Walks extends React.Component {
     }
     render () {
         const { walks } = this.state
-        console.log(walks)
             return (
               <React.Fragment>
               <h1>Guided Tours</h1>
               <div className="landmarksWalks">
               {walks.map((walk) => {
                 return (
-                <WalkCards key = { walk.id} walk = { walk }/>
+                <WalkCards key = { walk.id } walk = { walk }/>
                 )
               })}
               </div>
