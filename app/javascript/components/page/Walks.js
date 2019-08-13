@@ -1,5 +1,5 @@
 import React from "react"
-
+import WalkCards from '../component/WalkCards'
 import MapView from './MapView'
 
 class Walks extends React.Component {
@@ -21,28 +21,19 @@ class Walks extends React.Component {
           this.setState({walks})
       })
     }
-        
     render () {
         const { walks } = this.state
         console.log(walks)
             return (
               <React.Fragment>
+              <h1>Guided Tours</h1>
+              <div className="landmarksWalks">
               {walks.map((walk) => {
                 return (
-                <div className="card mb-3" key={walk.id}>
-                    <img src="https://placekitten.com/200/139" alt="Placekitten"></img>
-                    <div className="card-body">
-                        <a
-                          className="card-title" 
-                          href={`https://2082ac348b8a4bf4abf95c48546ecb63.vfs.cloud9.us-west-2.amazonaws.com/Walk/${walk.id}`}
-                        >
-                          {walk.name}
-                        </a>
-                        <p className="card-text">This guided tour will take you about {walk.duration} hours </p>
-                    </div>
-                </div>
+                <WalkCards key = { walk.id} walk = { walk }/>
                 )
               })}
+              </div>
               </React.Fragment>
             )
         }
