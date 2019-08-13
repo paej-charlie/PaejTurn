@@ -4,14 +4,15 @@ import { Card, CardHeader, CardImg, CardBody,
   CardTitle, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
   
 class Cards extends React.Component {
-    constructor(props) {
+      constructor(props) {
     super(props);
 
-      this.toggle = this.toggle.bind(this);
-      this.state = {
-        dropdownOpen: false
-      };
-    }
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      dropdownOpen: false
+    };
+   
+  }
   
    toggle() {
     this.setState(prevState => ({
