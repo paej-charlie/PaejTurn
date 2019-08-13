@@ -63,7 +63,7 @@ img {
   right: 10px;
 }
 .userForm {
-  margin: auto;
+  margin: 25px auto;
   max-width: 400px;
   padding: 20px;
   -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.61); 
@@ -148,3 +148,9 @@ img {
   text-align: center;
 }
 
+
+.alert, .notice {
+  position: absolute;
+  top: 56px;
+  right: 10px;
+}
