@@ -43,6 +43,17 @@ landmark_attributes = [
         longitude: "-117.063208",
         image: "placeholder"
     },
+    {
+        title: "My House",
+        address: "720 Dimmeydale Dr.",
+        city: "Deerfield",
+        state: "IL",
+        zip: "60015",
+        alcohol: true,
+        latitude: "33.123787",
+        longitude: "-117.063218",
+        image: "placeholder"
+    },
 ]
 
 landmark_attributes.each do |attributes|
@@ -89,4 +100,19 @@ stop_attributes = [
 
 stop_attributes.each do |attributes|
     Stop.find_or_create_by(attributes)
+end 
+
+favorite_attributes = [
+    {
+        user_id: 2,
+        landmark_id: 1,
+    },
+    {
+        user_id: 1,
+        landmark_id: 4,
+    },
+]
+
+favorite_attributes.each do |attributes|
+    Favorite.find_or_create_by(attributes)
 end 
