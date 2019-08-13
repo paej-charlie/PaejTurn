@@ -82,22 +82,37 @@ img {
 .dropDown {
   width: 100%;
 }
-.landmarks {
+.dropDown p {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  background-color: transparent;
+  border: 0;
+}
+.landmarksWalks {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
 }
-.landmarkCard {
+.cardComp {
   margin: 20px;
   -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.61); 
   box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.61);
 }
-.landmarkCard .card-text{
+.cardComp .card-text{
   padding: 20px 10px 10px;
 }
-.landmarkCard .card-header {
+.cardComp .card-header {
   font-size: 20px;
+}
+.walkBtn {
+  width: 100%;
+  margin-bottom: 10px;
 }
 .footer {
   text-align: center;

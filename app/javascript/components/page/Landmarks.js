@@ -27,10 +27,10 @@ class Landmarks extends React.Component {
             return (
               <React.Fragment>
               <h1>Landmarks</h1>
-              <div className="landmarks">
+              <div className="landmarksWalks">
               {landmarks.map((landmark) => {
                 return (
-                    <Cards landmark = { landmark }  />
+                    <Cards key={landmark.id} landmark = { landmark }  />
                 )
                   })}
                 </div>
