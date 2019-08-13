@@ -16,11 +16,6 @@ import {
 
     const items = [
       {
-        src: "https://i0.wp.com/blog.themenlohouse.com/wp-content/uploads/2017/02/5-best-weekend-getaways-los-angeles-8.jpg?fit=1400%2C600&ssl=1",
-        altText: 'La Jolla',
-        caption: 'La Jolla'
-      },
-      {
         src: "http://donnamedrea.com/wp-content/uploads/2016/04/san-diego-1450x600.jpg",
         altText: 'Gaslamp Quarter',
         caption: 'Gaslamp Quarter'
@@ -29,7 +24,12 @@ import {
         src: "http://socialventurepartners.org.s3.amazonaws.com/www.socialventurepartners.org/sites/54/2013/05/San-Diego-Slider.jpg",
         altText: 'Downtown San Diego',
         caption: 'Downtown San Diego'
-      }
+      },
+      {
+        src: "https://i0.wp.com/blog.themenlohouse.com/wp-content/uploads/2017/02/5-best-weekend-getaways-los-angeles-8.jpg?fit=1400%2C600&ssl=1",
+        altText: 'La Jolla',
+        caption: 'La Jolla'
+      },
     ];
 
 class Home extends React.Component {
