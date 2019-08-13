@@ -122,17 +122,20 @@ img {
 }
 
 .carousel {
-  width: 800px;
-  height: 400px;
+  width: 100%;
+  height: 800px;
   margin: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1400px) {
     .carousel {
       width:auto;
       height:auto;
     }
 }
 
-
+.about-us {
+  display: flex;
+  text-align: center;
+}
 

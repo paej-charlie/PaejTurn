@@ -5,22 +5,28 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
+  CarouselCaption,
+  Card, 
+  CardHeader, 
+  CardImg, 
+  CardBody,
+  CardTitle, 
+  CardText
 } from 'reactstrap';
 
     const items = [
       {
-        src: 'https://s.yimg.com/ny/api/res/1.2/fh08jL.NwRmn.ah2hfPdXQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://hips.hearstapps.com/hmg-prod/images/san-diego-2019-1546623583.jpg?crop=1.00xw%3A1.00xh%3B0%2C0&amp;resize=1440%3A%2A',
-        altText: 'Hotel Del Coronado',
-        caption: 'Hotel Del Coronado'
+        src: "https://i0.wp.com/blog.themenlohouse.com/wp-content/uploads/2017/02/5-best-weekend-getaways-los-angeles-8.jpg?fit=1400%2C600&ssl=1",
+        altText: 'La Jolla',
+        caption: 'La Jolla'
       },
       {
-        src: 'http://onyx.urvenue.com/imateq/uploads/704780572/800SC400/15022393.jpg',
+        src: "http://donnamedrea.com/wp-content/uploads/2016/04/san-diego-1450x600.jpg",
         altText: 'Gaslamp Quarter',
         caption: 'Gaslamp Quarter'
       },
       {
-        src: 'https://blog.virginatlantic.com/wp-content/uploads/2016/05/3360iCF4B98A258C18C3D.jpg',
+        src: "http://socialventurepartners.org.s3.amazonaws.com/www.socialventurepartners.org/sites/54/2013/05/San-Diego-Slider.jpg",
         altText: 'Downtown San Diego',
         caption: 'Downtown San Diego'
       }
@@ -99,6 +105,40 @@ class Home extends React.Component {
         </Carousel>
         
         <h1>About Us</h1>
+        
+        <div className="about-us">
+        <Card className="cardComp">
+          <CardHeader>Jared Lemke</CardHeader>
+            <CardBody>
+              <CardImg top width="100%" src="https://media.licdn.com/dms/image/C4E03AQF1oNYv0RDPYg/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=2sQnTfkaqpsl5cJcfEn4q0gu9h6pDUdoj59UoMeiprM" alt="Jared's Headshot" />
+              <CardText></CardText>
+            </CardBody>
+        </Card>
+        
+        <Card className="cardComp">
+          <CardHeader>Paige MacGregor</CardHeader>
+            <CardBody>
+              <CardImg top width="100%" src="https://media.licdn.com/dms/image/C4E03AQH3j2pFYZps_g/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=gZXRZYPrjdE-j1QvqLeGmQU3CdL2qROoQzFFkKsEoW4" alt="Paige's Headshot" />
+              <CardText></CardText>
+            </CardBody>
+        </Card>
+        
+         <Card className="cardComp">
+          <CardHeader>Amanda MacGregor</CardHeader>
+            <CardBody>
+              <CardImg top width="100%" src="https://media.licdn.com/dms/image/C5603AQFef8bsUp04kA/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=5oqpSsT6JAYnfFFSnA5L1pmscLyWypCmahEFZUAZIAM" alt="Amanda's Headshot" />
+              <CardText></CardText>
+            </CardBody>
+        </Card>
+        
+         <Card className="cardComp">
+          <CardHeader>Evan Katz</CardHeader>
+            <CardBody>
+              <CardImg top width="100%" src="https://media.licdn.com/dms/image/C4E03AQFxZ_ekOUjaIQ/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=__XG0UH3AbDWO9EY3lnujYqMxFPgXPbxyjZa9oHl3uE" alt="Evan's Headshot" />
+              <CardText></CardText>
+            </CardBody>
+        </Card>
+        </div>
       </React.Fragment>
     );
   }
