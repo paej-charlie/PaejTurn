@@ -45,14 +45,8 @@ class MainApp extends React.Component {
             <Route exact path="/" exact component={Home} />
             <Route path="/Landmarks" exact component={Landmarks}/>
             <Route path="/Walks" exact component={Walks}/>
-            <Route path="/Walk/:id" exact component={MapView}/>
-            <Route path="/Favorites" 
-              render={(props) => 
-                <Favorites 
-                  current_user = { current_user_id }
-                />
-              } 
-            />
+            <Route path="/Walk/:id" component={MapView}/>
+            <Route path="/User/:id" component={Favorites}/> 
           </Switch>
         </Router>
         <Footer />

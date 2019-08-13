@@ -5,12 +5,22 @@ import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 class MapView extends React.Component {
   constructor(props){
       super(props)
+      const { match } = props
+      
       this.state = {
           markers: {
             landmarks: []
           }
       }
-      this.getMarkers(props.match.params.id)
+      this.getMarkers(match.params.id)
+  }
+  
+  componentDidUpdate = (prevProps) => {
+    const prevMatch = prevProps.match
+    const { match } = this.props
+    if(match.params.id != prevMatch.params.id){
+      this.getMarkers(match.params.id)
+    }
   }
   
   getMarkers = (id) => {
@@ -58,7 +68,7 @@ class MapView extends React.Component {
           let lat = marker.latitude
           let long = marker.longitude
               return (
-                  <Marker position={[lat, long]}>
+                  <Marker key={index} position={[lat, long]}>
                     <Popup>
                       {marker.title}
                     </Popup>
@@ -71,7 +81,7 @@ class MapView extends React.Component {
       <ul className="list-group list-group-flush mapUl">
       {markers.landmarks.map((marker, index) => {
           return(
-              <li className="list-group-item">{marker.title}</li>
+              <li className="list-group-item" key={index}>{marker.title}</li>
           ) 
       })}
       </ul>

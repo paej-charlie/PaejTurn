@@ -30,7 +30,7 @@ class Landmarks extends React.Component {
               <div className="landmarks">
               {landmarks.map((landmark) => {
                 return (
-                    <Cards landmark = { landmark }  />
+                    <Cards key={landmark.id} landmark = { landmark }  />
                 )
                   })}
                 </div>
