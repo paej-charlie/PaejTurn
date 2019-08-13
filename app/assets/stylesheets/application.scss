@@ -114,6 +114,11 @@ img {
   width: 100%;
   margin-bottom: 10px;
 }
+p.alert, p.notice {
+  position: absolute;
+  top: 56px;
+  right: 10px;
+}
 .footer {
   text-align: center;
   background-color: #f8f9fa;
