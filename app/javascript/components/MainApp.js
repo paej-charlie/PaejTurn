@@ -36,9 +36,6 @@ class MainApp extends React.Component {
           sign_in_route = { sign_in_route }
           sign_out_route= { sign_out_route }
         />
-        <Jumbotron className="headerJumbo">
-          <h1>History in Motion</h1>
-        </Jumbotron>
         <Router>
           <Switch>
             <Route exact path="/" exact component={Home} />
