@@ -374,3 +374,18 @@ stop_attributes = [
 stop_attributes.each do |attributes|
     Stop.find_or_create_by(attributes)
 end 
+
+favorite_attributes = [
+    {
+        user_id: 2,
+        landmark_id: 1,
+    },
+    {
+        user_id: 1,
+        landmark_id: 4,
+    },
+]
+
+favorite_attributes.each do |attributes|
+    Favorite.find_or_create_by(attributes)
+end 

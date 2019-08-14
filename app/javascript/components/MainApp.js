@@ -4,7 +4,8 @@ import {
  BrowserRouter as Router, 
  Link,
  Route, 
- Switch
+ Switch,
+ Redirect,
 } from 'react-router-dom'
  
 import { Jumbotron } from 'reactstrap'
@@ -34,21 +35,30 @@ class MainApp extends React.Component {
         <Header 
           logged_in = { logged_in }
           sign_in_route = { sign_in_route }
-          sign_out_route= { sign_out_route }
+          sign_out_route = { sign_out_route }
+          current_user_id = { current_user_id }
         />
         <Router>
           <Switch>
             <Route exact path="/" exact component={Home} />
-            <Route path="/Landmarks" exact component={Landmarks}/>
-            <Route path="/Walks" exact component={Walks}/>
-            <Route path="/Walk/:id" exact component={MapView}/>
-            <Route path="/Favorites" 
+            <Route path="/Landmarks" 
               render={(props) => 
-                <Favorites 
-                  current_user = { current_user_id }
+                <Landmarks 
+                  current_user_id = { current_user_id }
+                  logged_in = { logged_in }
                 />
-              } 
+              }
             />
+            <Route path="/Walks" exact component={Walks}/>
+            <Route path="/Walk/:id" component={MapView}/>
+            <Route path="/User/:id" 
+              render={(props) =>
+                <Favorites 
+                  current_user_id = { current_user_id }
+                  logged_in = { logged_in }
+                />
+              }
+            /> 
           </Switch>
         </Router>
         <Footer />
