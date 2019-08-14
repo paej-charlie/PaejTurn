@@ -123,7 +123,7 @@ class Home extends React.Component {
         <Card className="cardComp">
           <CardHeader>Paige MacGregor</CardHeader>
             <CardBody>
-              <CardImg className = "headshot-p" top width="100%" src="https://media.licdn.com/dms/image/C4E03AQH3j2pFYZps_g/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=gZXRZYPrjdE-j1QvqLeGmQU3CdL2qROoQzFFkKsEoW4" alt="Paige's Headshot" />
+              <div className = "headshot-p"></div>
               <CardText>About Paige:</CardText>
             </CardBody>
         </Card>
@@ -131,7 +131,7 @@ class Home extends React.Component {
          <Card className="cardComp">
           <CardHeader>Amanda MacGregor</CardHeader>
             <CardBody>
-              <CardImg className = "headshot-a" top width="100%" src="https://media.licdn.com/dms/image/C5603AQFef8bsUp04kA/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=5oqpSsT6JAYnfFFSnA5L1pmscLyWypCmahEFZUAZIAM" alt="Amanda's Headshot" />
+              <div className="headshot-a"></div>
               <CardText>About Amanda:</CardText>
             </CardBody>
         </Card>
@@ -139,7 +139,7 @@ class Home extends React.Component {
          <Card className="cardComp">
           <CardHeader>Evan Katz</CardHeader>
             <CardBody>
-              <CardImg className = "headshot-e" top width="100%" src="https://media.licdn.com/dms/image/C4E03AQFxZ_ekOUjaIQ/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=__XG0UH3AbDWO9EY3lnujYqMxFPgXPbxyjZa9oHl3uE" alt="Evan's Headshot" />
+              <div className = "headshot-e"></div>
               <CardText>About Evan:</CardText>
             </CardBody>
         </Card>
@@ -147,8 +147,8 @@ class Home extends React.Component {
         <Card className="cardComp">
           <CardHeader>Jared Lemke</CardHeader>
             <CardBody>
-              <CardImg className = "headshot-j" top width="100%" src="https://media.licdn.com/dms/image/C4E03AQF1oNYv0RDPYg/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=2sQnTfkaqpsl5cJcfEn4q0gu9h6pDUdoj59UoMeiprM" alt="Jared's Headshot" />
-              <CardText>About Jared:</CardText>
+              <div className = "headshot-j"></div>
+              <CardText>Cool, calm and collected under pressure. </CardText>
             </CardBody>
         </Card>
         </div>
@@ -158,3 +158,4 @@ class Home extends React.Component {
 }
 
 export default Home
+// <CardImg className = "headshot-a" top width="100%" src="https://media.licdn.com/dms/image/C5603AQFef8bsUp04kA/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=5oqpSsT6JAYnfFFSnA5L1pmscLyWypCmahEFZUAZIAM" alt="Amanda's Headshot" />

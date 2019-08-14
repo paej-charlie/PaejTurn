@@ -210,16 +210,52 @@ img {
 
 .headshot-p {
   border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  background-image: url(https://media.licdn.com/dms/image/C4E03AQH3j2pFYZps_g/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=gZXRZYPrjdE-j1QvqLeGmQU3CdL2qROoQzFFkKsEoW4);
+  background-repeat: no-repeat;
+  transition: .5s;
+}
+
+.headshot-p:hover {
+  background-image: url();
 }
 
 .headshot-a {
   border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  background-image: url(https://media.licdn.com/dms/image/C5603AQFef8bsUp04kA/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=5oqpSsT6JAYnfFFSnA5L1pmscLyWypCmahEFZUAZIAM);
+  background-repeat: no-repeat;
+  transition: .5s;
+}
+
+.headshot-a:hover {
+  background-image: url();
 }
 
 .headshot-e {
   border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  background-image: url(https://media.licdn.com/dms/image/C4E03AQFxZ_ekOUjaIQ/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=__XG0UH3AbDWO9EY3lnujYqMxFPgXPbxyjZa9oHl3uE);
+  background-repeat: no-repeat;
+  transition: .5s;
+}
+
+.headshot-e:hover {
+  background-image: url();
 }
 
 .headshot-j {
   border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  background-image: url(https://media.licdn.com/dms/image/C4E03AQF1oNYv0RDPYg/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=2sQnTfkaqpsl5cJcfEn4q0gu9h6pDUdoj59UoMeiprM);
+  background-repeat: no-repeat;
+  transition: .5s;
+}
+
+.headshot-j:hover {
+  background-image: url(https://i2.wp.com/hawaiianshirtdude.com/wp-content/uploads/2018/05/tom-selleck-final-1.jpg?resize=200%2C200&ssl=1);
 }
