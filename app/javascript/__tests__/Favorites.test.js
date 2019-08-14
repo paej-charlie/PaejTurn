@@ -1,18 +1,19 @@
   import React from 'react';
   import ReactDOM from 'react-dom';
-  import Landmarks from '../components/page/Landmarks';
+  import Favorites from '../components/page/Favorites';
   import Enzyme, { mount } from 'enzyme';
   import Adapter from 'enzyme-adapter-react-16';
   import fetch from 'isomorphic-fetch'
 
   Enzyme.configure({ adapter: new Adapter() });
 
-  it('renders without crashing', () => {
+  it('Favorites renders without crashing', () => {
     const div = document.createElement('div')
-    ReactDOM.render(<Landmarks />, div)
+    ReactDOM.render(<Favorites />, div)
   })
 
-  it('renders the landmark', ()=>{
-    const app = mount(<Landmarks />)
-    expect(app.find('h1').first().text()).toEqual('Landmarks')
+  it('Favorites has a header "favorites"', ()=>{
+    const app = mount(<Favorites />)
+    expect(app.find('h1').first().text()).toEqual('Favorites')
   })
+  
