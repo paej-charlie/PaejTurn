@@ -31,8 +31,8 @@ class Landmarks extends React.Component {
                 return (
                     <Cards key={landmark.id} landmark = { landmark }  />
                 )
-                  })}
-                </div>
+              })}
+              </div>
               </React.Fragment>
             )
         }

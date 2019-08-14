@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Card, CardHeader, CardImg, CardBody, CardTitle, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import Cards from '../component/Cards'
 
 class Favorites extends React.Component {
   constructor(props){
@@ -41,26 +42,13 @@ class Favorites extends React.Component {
     return (
       <React.Fragment>
         <h1>My Favorite Places</h1>
+        <div className="landmarksWalks">
         {favorites.landmarks.map((favorite, index) => {
           return(
-            <Card className="cardComp" key={index}>
-              <CardHeader>{favorite.title}</CardHeader>
-              <CardBody>
-              <CardImg top width="100%" src="http://placekitten.com/200/150" alt="Card image cap" />
-                <CardText>Located at {favorite.address}, {favorite.city}, {favorite.state} {favorite.zip}.</CardText>
-                   <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="dropDown">
-                    <DropdownToggle caret>
-                      More Info
-                    </DropdownToggle>
-                    <DropdownMenu className="dropDown">
-                      <p>Alcohol: {favorite.alcohol ? 'This landmark offers alcohol' : 'No alcohol at this landmark'}</p>
-                      <p>Description: {favorite.description}</p>
-                    </DropdownMenu>
-                  </Dropdown>
-              </CardBody>
-            </Card>
+            <Cards key={favorite.id} landmark = { favorite }  />
           )
         })}
+        </div>
       </React.Fragment>
     );
   }

@@ -8,10 +8,37 @@ class Cards extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
+      favorites: [],
       dropdownOpen: false,
       liked: 'Like'
     };
    
+  }
+  
+  getFavorites(){
+    const { favorites } = this.state
+    fetch("/favorites")
+    .then( response => {
+        return response.json()
+    })
+    .then( favorites => {
+        this.setState({favorites})
+    })
+  }
+  
+  createFavorite = (landmarkId) =>{
+    return fetch("/favorites",{
+      method: 'POST',
+      headers:{
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({favorite: landmarkId})
+    })
+    .then(response => {
+      if(response.status === 201){
+        this.getFavorites()
+      }
+    })
   }
   
    toggle() {
@@ -22,6 +49,7 @@ class Cards extends React.Component {
   
   likeClick = () => {
     const { liked } = this.state
+    this.createFavorite()
     if(liked === 'Like'){
       this.setState({liked: 'Liked'})
     } else {
