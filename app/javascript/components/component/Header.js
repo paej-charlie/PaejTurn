@@ -51,7 +51,7 @@ class Header extends React.Component {
       <React.Fragment>
         <div>
           <Navbar color="light" light expand="md">
-            <NavbarBrand href="/">HiM</NavbarBrand>
+            <NavbarBrand href="/">History in Motion</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
