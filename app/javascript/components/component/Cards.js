@@ -28,8 +28,7 @@ class Cards extends React.Component {
       this.setState({liked: 'Like'})
     }
   }
-
-
+  
   render () {
     const { landmark } = this.props
     return (
@@ -38,14 +37,14 @@ class Cards extends React.Component {
         <CardHeader>{landmark.title} <Button onClick={this.likeClick} className="likeIcon" outline color="danger">{ this.state.liked }</Button></CardHeader>
         <CardBody>
         <img className="cardImg" src="http://placekitten.com/400/350" alt="Card image cap" />
-          <CardText>Located at {landmark.address}, {landmark.city}, {landmark.state} {landmark.zip}.</CardText>
+          <CardText>Description: {landmark.description}.</CardText>
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="dropDown">
               <DropdownToggle caret>
                 More Info
               </DropdownToggle>
               <DropdownMenu className="dropDown">
                 <p>Alcohol: {landmark.alcohol ? 'This landmark offers alcohol' : 'No alcohol at this landmark'}</p>
-                <p>Description: {landmark.description}</p>
+                <p>Located at {landmark.address}, {landmark.city}, {landmark.state} {landmark.zip}</p>
               </DropdownMenu>
             </Dropdown>
         </CardBody>

@@ -103,6 +103,10 @@ img {
   display: flex;
   justify-content: space-between;
 }
+.cardComp {
+  height: auto;
+  align-self: flex-start;
+}
 .cardImg {
   max-width: 100%;
   border-radius: calc(0.25rem - 1px)
