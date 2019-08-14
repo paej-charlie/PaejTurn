@@ -26,6 +26,18 @@ h1 {
   margin: 20px;
   text-align: center;
 }
+
+h2 {
+  margin: 20px;
+  text-align: center;
+}
+
+.app-uses {
+  margin: auto;
+  text-align: center;
+  list-style-position: inside;
+}
+
 .leaflet-container {
     height: 450px;
     width: 600px;
@@ -134,9 +146,9 @@ img {
   margin: auto;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 2000px) {
     .carousel {
-      width: auto;
+      max-width: 100%;
       height: auto;
     }
 }
@@ -149,11 +161,34 @@ img {
 }
 
 .about-us .cardComp {
-  width: 300px;
+  width: 250px;
 }
 
 .alert, .notice {
   position: absolute;
   top: 56px;
   right: 10px;
+}
+
+.imgCap {
+  background-color: rgba(77, 77, 77, .8);
+  margin: 0 22%;
+  border-radius: 20px;
+  padding: 0;
+}
+
+.headshot-p {
+  border-radius: 20px;
+}
+
+.headshot-a {
+  border-radius: 20px;
+}
+
+.headshot-e {
+  border-radius: 20px;
+}
+
+.headshot-j {
+  border-radius: 20px;
 }
