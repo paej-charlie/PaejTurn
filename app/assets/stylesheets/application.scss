@@ -79,6 +79,19 @@ img {
 .dropDown button {
   width: 100%;
 }
+.landmarkBtn {
+  position: relative;
+  bottom: 10px;
+}
+.readMoreBtn {
+  width: 100%;
+  background-color: #007bff;
+    border-color: #007bff;
+}
+.readMoreBtn:hover {
+      background-color: #0069d9;
+    border-color: #0062cc;
+}
 .dropDown {
   width: 100%;
 }
@@ -117,6 +130,19 @@ img {
   -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.61); 
   box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.61);
 }
+.landmarksWalks .cardComp {
+  width: 400px;
+  min-height: 650px;
+}
+.landmarksWalks .cardComp img {
+  width: 400px;
+  height: 350px;
+}
+//TODO change the above style once all pictures are resized in the database
+.textHide {
+  height: 150px;
+  overflow: hidden;
+}
 .cardComp .card-text{
   padding: 20px 10px 10px;
 }
@@ -126,6 +152,7 @@ img {
 .walkBtn {
   width: 100%;
   margin-bottom: 10px;
+  
 }
 .footer {
   text-align: center;
