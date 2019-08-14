@@ -35,13 +35,18 @@ class Cards extends React.Component {
 
 
   render () {
-    const { landmark, favorites } = this.props
+    const { landmark, favorites, logged_in } = this.props
     return (
       <React.Fragment>
         <Card className="cardComp">
-        <CardHeader>{landmark.title} <Button onClick={this.likeClick} className="likeIcon" outline color="danger">{ this.state.liked }</Button></CardHeader>
+        {logged_in &&
+          <CardHeader>{landmark.title} <Button onClick={this.likeClick} className="likeIcon" outline color="danger">{ this.state.liked }</Button></CardHeader>
+        }
+        {!logged_in &&
+           <CardHeader>{landmark.title}</CardHeader>
+        }
         <CardBody>
-        <img className="cardImg" src="http://placekitten.com/400/350" alt="Card image cap" />
+        <img className="cardImg" src={landmark.image} alt="Card image cap" />
           <CardText>Located at {landmark.address}, {landmark.city}, {landmark.state} {landmark.zip}.</CardText>
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="dropDown">
               <DropdownToggle caret>

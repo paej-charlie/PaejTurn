@@ -51,7 +51,7 @@ class Landmarks extends React.Component {
     
     render () {
         const { landmarks, favorites } = this.state
-        const { current_user_id } = this.props
+        const { current_user_id, logged_in } = this.props
         console.log(favorites)
             return (
               <React.Fragment>
@@ -62,6 +62,7 @@ class Landmarks extends React.Component {
                     <Cards key={landmark.id} 
                         landmark = { landmark } 
                         current_user_id = { current_user_id } 
+                        logged_in = { logged_in }
                         createFavorite = { this.createFavorite }
                     />
                 )

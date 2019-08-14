@@ -43,12 +43,22 @@ class MainApp extends React.Component {
             <Route exact path="/" exact component={Home} />
             <Route path="/Landmarks" 
               render={(props) => 
-                <Landmarks current_user_id = { current_user_id } />
+                <Landmarks 
+                  current_user_id = { current_user_id }
+                  logged_in = { logged_in }
+                />
               }
             />
             <Route path="/Walks" exact component={Walks}/>
             <Route path="/Walk/:id" component={MapView}/>
-            <Route path="/User/:id" component={Favorites}/> 
+            <Route path="/User/:id" 
+              render={(props) =>
+                <Favorites 
+                  current_user_id = { current_user_id }
+                  logged_in = { logged_in }
+                />
+              }
+            /> 
           </Switch>
         </Router>
         <Footer />

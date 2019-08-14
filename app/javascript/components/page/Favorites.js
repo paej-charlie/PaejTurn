@@ -6,14 +6,14 @@ import Cards from '../component/Cards'
 class Favorites extends React.Component {
   constructor(props){
       super(props)
-      const { match } = props
+      const { current_user_id } = this.props
       
       this.state = {
           favorites: {
               landmarks: []
           },
       }
-      this.getFavorites(match.params.id)
+      this.getFavorites(current_user_id)
   }
   
   getFavorites = (id) => {
@@ -31,6 +31,7 @@ class Favorites extends React.Component {
 
   render () {
     const { favorites } = this.state
+    const {logged_in } = this.props
     console.log(favorites)
     if(favorites == undefined){
       return(
@@ -45,7 +46,10 @@ class Favorites extends React.Component {
         <div className="landmarksWalks">
         {favorites.landmarks.map((favorite, index) => {
           return(
-            <Cards key={favorite.id} landmark = { favorite }  />
+            <Cards key={favorite.id} 
+              landmark = { favorite }  
+              logged_in = { logged_in }
+            />
           )
         })}
         </div>
