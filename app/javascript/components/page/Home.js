@@ -16,20 +16,25 @@ import {
 
     const items = [
       {
-        src: "http://donnamedrea.com/wp-content/uploads/2016/04/san-diego-1450x600.jpg",
+        src: "https://www.thebristolsandiego.com/resourcefiles/mainimages/bhsd-gaslamp_1.jpg",
         altText: 'Gaslamp Quarter',
         caption: 'Gaslamp Quarter'
       },
       {
-        src: "http://socialventurepartners.org.s3.amazonaws.com/www.socialventurepartners.org/sites/54/2013/05/San-Diego-Slider.jpg",
+        src: "https://www.thebristolsandiego.com/resourcefiles/mainimages/location-of-san-diego-hotel-california-top.jpg",
         altText: 'Downtown San Diego',
         caption: 'Downtown San Diego'
       },
       {
-        src: "https://i0.wp.com/blog.themenlohouse.com/wp-content/uploads/2017/02/5-best-weekend-getaways-los-angeles-8.jpg?fit=1400%2C600&ssl=1",
+        src: "https://www.theinternettraveller.com/images/san_diego_2000x600",
+        altText: 'Sunset Cliffs, San Diego',
+        caption: 'Sunset Cliffs, San Diego'
+      },
+      {
+        src: "https://www.empress-hotel.com/resourcefiles/mainimages/spring-in-la-jolla-san-diego_1.jpg",
         altText: 'La Jolla',
         caption: 'La Jolla'
-      },
+      }
     ];
 
 class Home extends React.Component {
@@ -82,8 +87,8 @@ class Home extends React.Component {
             <div className = "imgCont">
               <img src={item.src} alt={item.altText} />
           </div>
-          <div className = "textCont">
-              <CarouselCaption captionHeader={item.caption} />
+            <div className = "textCont">
+              <CarouselCaption captionHeader={item.caption} className = "imgCap" />
             </div>
           </div>
         </CarouselItem>
@@ -104,38 +109,46 @@ class Home extends React.Component {
           <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
         </Carousel>
         
-        <h1>About Us</h1>
+        <h1>Mission Statement/Tagline</h1>
+        
+        <ul className = "app-uses">
+          <li>App uses here</li>
+          <li>App uses here</li>
+          <li>App uses here</li>
+        </ul>
+        
+        <h2>About Us</h2>
         
         <div className="about-us">
         <Card className="cardComp">
-          <CardHeader>Jared Lemke</CardHeader>
-            <CardBody>
-              <CardImg top width="100%" src="https://media.licdn.com/dms/image/C4E03AQF1oNYv0RDPYg/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=2sQnTfkaqpsl5cJcfEn4q0gu9h6pDUdoj59UoMeiprM" alt="Jared's Headshot" />
-              <CardText></CardText>
-            </CardBody>
-        </Card>
-        
-        <Card className="cardComp">
           <CardHeader>Paige MacGregor</CardHeader>
             <CardBody>
-              <CardImg top width="100%" src="https://media.licdn.com/dms/image/C4E03AQH3j2pFYZps_g/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=gZXRZYPrjdE-j1QvqLeGmQU3CdL2qROoQzFFkKsEoW4" alt="Paige's Headshot" />
-              <CardText></CardText>
+              <div className = "headshot-p"></div>
+              <CardText>About Paige:</CardText>
             </CardBody>
         </Card>
         
          <Card className="cardComp">
           <CardHeader>Amanda MacGregor</CardHeader>
             <CardBody>
-              <CardImg top width="100%" src="https://media.licdn.com/dms/image/C5603AQFef8bsUp04kA/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=5oqpSsT6JAYnfFFSnA5L1pmscLyWypCmahEFZUAZIAM" alt="Amanda's Headshot" />
-              <CardText></CardText>
+              <div className="headshot-a"></div>
+              <CardText>About Amanda:</CardText>
             </CardBody>
         </Card>
         
          <Card className="cardComp">
           <CardHeader>Evan Katz</CardHeader>
             <CardBody>
-              <CardImg top width="100%" src="https://media.licdn.com/dms/image/C4E03AQFxZ_ekOUjaIQ/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=__XG0UH3AbDWO9EY3lnujYqMxFPgXPbxyjZa9oHl3uE" alt="Evan's Headshot" />
-              <CardText></CardText>
+              <div className = "headshot-e"></div>
+              <CardText>About Evan:</CardText>
+            </CardBody>
+        </Card>
+        
+        <Card className="cardComp">
+          <CardHeader>Jared Lemke</CardHeader>
+            <CardBody>
+              <div className = "headshot-j"></div>
+              <CardText>Cool, calm and collected under pressure. </CardText>
             </CardBody>
         </Card>
         </div>
@@ -145,3 +158,4 @@ class Home extends React.Component {
 }
 
 export default Home
+// <CardImg className = "headshot-a" top width="100%" src="https://media.licdn.com/dms/image/C5603AQFef8bsUp04kA/profile-displayphoto-shrink_200_200/0?e=1571270400&v=beta&t=5oqpSsT6JAYnfFFSnA5L1pmscLyWypCmahEFZUAZIAM" alt="Amanda's Headshot" />

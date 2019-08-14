@@ -51,23 +51,23 @@ class Header extends React.Component {
       <React.Fragment>
         <div>
           <Navbar color="light" light expand="md">
-            <NavbarBrand href="/">HiM</NavbarBrand>
+            <NavbarBrand href="/">History in Motion</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="Landmarks">Landmarks</NavLink>
+                      <NavLink href="/Landmarks">Landmarks</NavLink>
                     </NavItem>
                     
                     <NavItem>
                       {logged_in &&
-                      <NavLink href="Walks">Guided Tours</NavLink>
+                      <NavLink href="/Walks">Guided Tours</NavLink>
                       }
                     </NavItem>
                     
                     <NavItem>
                       {logged_in &&
-                      <NavLink href="Favorites">Favorites</NavLink>
+                      <NavLink href={`/user/${current_user_id}`}>Favorites</NavLink>
                       }
                     </NavItem>
                     
