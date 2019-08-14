@@ -5,40 +5,12 @@ import { Card, CardHeader, CardImg, CardBody, CardText, Dropdown, DropdownToggle
 class Cards extends React.Component {
     constructor(props) {
       super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      favorites: [],
-      dropdownOpen: false,
-      liked: 'Like'
-    };
-   
-  }
-  
-  getFavorites(){
-    const { favorites } = this.state
-    fetch("/favorites")
-    .then( response => {
-        return response.json()
-    })
-    .then( favorites => {
-        this.setState({favorites})
-    })
-  }
-  
-  createFavorite = (landmarkId) =>{
-    return fetch("/favorites",{
-      method: 'POST',
-      headers:{
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({favorite: landmarkId})
-    })
-    .then(response => {
-      if(response.status === 201){
-        this.getFavorites()
-      }
-    })
+      
+      this.toggle = this.toggle.bind(this);
+      this.state = {
+        dropdownOpen: false,
+        liked: 'Like'
+      };
   }
   
    toggle() {
@@ -49,8 +21,12 @@ class Cards extends React.Component {
   
   likeClick = () => {
     const { liked } = this.state
-    this.createFavorite()
+    const { landmark, createFavorite } = this.props
+    const form = {
+      landmark_id: landmark.id
+    }
     if(liked === 'Like'){
+      createFavorite(form)
       this.setState({liked: 'Liked'})
     } else {
       this.setState({liked: 'Like'})
@@ -59,7 +35,7 @@ class Cards extends React.Component {
 
 
   render () {
-    const { landmark } = this.props
+    const { landmark, favorites } = this.props
     return (
       <React.Fragment>
         <Card className="cardComp">
