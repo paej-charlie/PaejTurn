@@ -5,13 +5,12 @@ import { Card, CardHeader, CardImg, CardBody, CardText, Dropdown, DropdownToggle
 class Cards extends React.Component {
     constructor(props) {
       super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false,
-      liked: 'Like'
-    };
-   
+      
+      this.toggle = this.toggle.bind(this);
+      this.state = {
+        dropdownOpen: false,
+        liked: 'Like'
+      };
   }
   
    toggle() {
@@ -22,7 +21,12 @@ class Cards extends React.Component {
   
   likeClick = () => {
     const { liked } = this.state
+    const { landmark, createFavorite } = this.props
+    const form = {
+      landmark_id: landmark.id
+    }
     if(liked === 'Like'){
+      createFavorite(form)
       this.setState({liked: 'Liked'})
     } else {
       this.setState({liked: 'Like'})
@@ -31,13 +35,18 @@ class Cards extends React.Component {
 
 
   render () {
-    const { landmark } = this.props
+    const { landmark, favorites, logged_in } = this.props
     return (
       <React.Fragment>
         <Card className="cardComp">
-        <CardHeader>{landmark.title} <Button onClick={this.likeClick} className="likeIcon" outline color="danger">{ this.state.liked }</Button></CardHeader>
+        {logged_in &&
+          <CardHeader>{landmark.title} <Button onClick={this.likeClick} className="likeIcon" outline color="danger">{ this.state.liked }</Button></CardHeader>
+        }
+        {!logged_in &&
+           <CardHeader>{landmark.title}</CardHeader>
+        }
         <CardBody>
-        <img className="cardImg" src="http://placekitten.com/400/350" alt="Card image cap" />
+        <img className="cardImg" src={landmark.image} alt="Card image cap" />
           <CardText>Located at {landmark.address}, {landmark.city}, {landmark.state} {landmark.zip}.</CardText>
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="dropDown">
               <DropdownToggle caret>
