@@ -55,7 +55,11 @@ class Landmarks extends React.Component {
         console.log(favorites)
             return (
               <React.Fragment>
+              
+              <div className = "banner-lm">
               <h1>Landmarks</h1>
+              </div>
+              
               <div className="landmarksWalks">
               {landmarks.map((landmark) => {
                 return (
