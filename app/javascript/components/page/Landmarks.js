@@ -18,23 +18,8 @@ class Landmarks extends React.Component {
         .then( response => {
             return response.json()
         })
-        .then( response => {
-            landmarks = response.map((landmark) => {
-                {
-                    id: landmark.id
-                    title: landmark.title
-                    address: landmark.address
-                    city: landmark.city
-                    state: landmark.state
-                    zip: landmark.zip
-                    description: landmark.description
-                    alcohol: landmark.alcohol
-                    latitude: landmark.latitude
-                    longitude: landmark.longitude
-                    image: landmark.image
-                    
-                }
-            })
+        .then( landmarks => {
+            
             this.setState({landmarks})
         })
     }
