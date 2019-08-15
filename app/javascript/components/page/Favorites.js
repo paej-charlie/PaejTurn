@@ -27,12 +27,28 @@ class Favorites extends React.Component {
           console.log(favorites)
           this.setState({favorites})
       })
-  }  
+  }
+  
+  deleteFavorite = (id) =>{
+    const { current_user_id } = this.props
+    return fetch(`/favorites/${id}`, {
+        method: 'DELETE'
+      }
+    ).then(response => {
+      if(response.status === 200){
+        this.getFavorites(current_user_id)
+      }else{
+        response.json()
+        .then(payload => {
+          this.setState({error: payload.error})
+        })
+      }
+    })
+  }
 
   render () {
     const { favorites } = this.state
     const {logged_in } = this.props
-    console.log(favorites)
     if(favorites == undefined){
       return(
         <div>

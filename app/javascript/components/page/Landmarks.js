@@ -18,7 +18,23 @@ class Landmarks extends React.Component {
         .then( response => {
             return response.json()
         })
-        .then( landmarks => {
+        .then( response => {
+            landmarks = response.map((landmark) => {
+                {
+                    id: landmark.id
+                    title: landmark.title
+                    address: landmark.address
+                    city: landmark.city
+                    state: landmark.state
+                    zip: landmark.zip
+                    description: landmark.description
+                    alcohol: landmark.alcohol
+                    latitude: landmark.latitude
+                    longitude: landmark.longitude
+                    image: landmark.image
+                    
+                }
+            })
             this.setState({landmarks})
         })
     }
@@ -50,16 +66,16 @@ class Landmarks extends React.Component {
     }
     
     render () {
-        const { landmarks, favorites } = this.state
+        const { landmarks } = this.state
         const { current_user_id, logged_in } = this.props
-        console.log(favorites)
+        console.log(landmarks)
             return (
               <React.Fragment>
               <h1>Landmarks</h1>
               <div className="landmarksWalks">
               {landmarks.map((landmark) => {
                 return (
-                    <Cards key={landmark.id} 
+                    <Cards key={landmark.title} 
                         landmark = { landmark } 
                         current_user_id = { current_user_id } 
                         logged_in = { logged_in }

@@ -5,14 +5,14 @@ import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 class MapView extends React.Component {
   constructor(props){
       super(props)
-      const { match } = props
+      const { id } = props.match.params
       
       this.state = {
           markers: {
             landmarks: []
           }
       }
-      this.getMarkers(match.params.id)
+      this.getMarkers(id)
   }
   
   componentDidUpdate = (prevProps) => {
