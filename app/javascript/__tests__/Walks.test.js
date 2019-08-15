@@ -1,19 +1,19 @@
   import React from 'react';
   import ReactDOM from 'react-dom';
-  import Home from '../components/page/Home';
+  import Walks from '../components/page/Walks';
   import Enzyme, { mount } from 'enzyme';
   import Adapter from 'enzyme-adapter-react-16';
   import fetch from 'isomorphic-fetch'
 
   Enzyme.configure({ adapter: new Adapter() });
 
-  it('Home renders without crashing', () => {
+  it('Walks renders without crashing', () => {
     const div = document.createElement('div')
-    ReactDOM.render(<Home />, div)
+    ReactDOM.render(<Walks />, div)
   })
 
-  it('Home has About Us section', ()=>{
-    const app = mount(<Home />)
-    expect(app.find('h1').first().text()).toEqual('Mission Statement/Tagline')
+  it('Walks has a header - Guided Tours', ()=>{
+    const app = mount(<Walks />)
+    expect(app.find('h1').first().text()).toEqual('Guided Tours')
   })
 
