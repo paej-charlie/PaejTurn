@@ -32,6 +32,141 @@ The header (with links to all pages) and footer are present on all pages.
 ## Code Example
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
+We added a few required fields on top of Devise to sign up:
+
+```class ApplicationController < ActionController::Base
+    before_action :configure_permitted_parameters, if: :devise_controller?
+    skip_before_action :verify_authenticity_token
+    
+    protected
+
+      def configure_permitted_parameters
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :age])
+      end
+end
+```
+
+As far as React, many of our components held state, and also passed that state on:
+
+```class Landmarks extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            landmarks: [],
+            favorites: []
+        }
+        this.getLandmarks()
+        this.getFavorites()
+    }
+    
+    getLandmarks = () => {
+        const { landmarks } = this.state
+        fetch("/landmarks")
+        .then( response => {
+            return response.json()
+        })
+        .then( landmarks => {
+            this.setState({landmarks})
+        })
+    }
+    
+    getFavorites(){
+        const { favorites } = this.state
+        fetch("/favorites")
+        .then( response => {
+            return response.json()
+        })
+        .then( favorites => {
+            this.setState({favorites})
+        })
+     }
+      
+    createFavorite = (attrs) =>{
+        return fetch("/favorites",{
+            method: 'POST',
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({favorite: attrs})
+        })
+        .then(response => {
+            console.log(response)
+            if(response.status === 201){
+                this.getFavorites()
+            }
+        })
+    }
+  ```
+  
+  ```class Favorites extends React.Component {
+  constructor(props){
+      super(props)
+      const { current_user_id } = this.props
+      
+      this.state = {
+          favorites: {
+              landmarks: []
+          },
+      }
+      this.getFavorites(current_user_id)
+  }
+  
+  getFavorites = (id) => {
+      const { favorites } = this.state
+      fetch(`/users/${id}`)
+      .then( response => {
+          console.log(response)
+          return response.json()
+      })
+      .then( favorites => {
+          console.log(favorites)
+          this.setState({favorites})
+      })
+  }
+```
+  
+  In the Header component, we also chose to only show certain links based on logged-in status:
+  
+  ``` return (
+      <React.Fragment>
+        <div>
+          <Navbar color="light" light expand="md">
+            <NavbarBrand className = "navbar" href="/">History in Motion</NavbarBrand>
+              <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                  <Nav className="ml-auto" navbar>
+                    <NavItem>
+                      <NavLink href="/Landmarks">Landmarks</NavLink>
+                    </NavItem>
+                    
+                    <NavItem>
+                      {logged_in &&
+                      <NavLink href="/Walks">Guided Tours</NavLink>
+                      }
+                    </NavItem>
+                    
+                    <NavItem>
+                      {logged_in &&
+                      <NavLink href={`/user/${current_user_id}`}>Favorites</NavLink>
+                      }
+                    </NavItem>
+                    
+                    <NavItem>
+                      {logged_in &&
+                        <NavLink href={sign_out_route}>Log Out</NavLink>
+                      }
+                      {!logged_in &&
+                        <NavLink href={sign_in_route}>Log In</NavLink>
+                      }
+                    </NavItem>
+                  </Nav>
+                </Collapse>
+              </Navbar>
+          </div>
+      </React.Fragment>
+  ```
+
+
 ## API Reference
 
 - [Leaflet](https://leafletjs.com/)
