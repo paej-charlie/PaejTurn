@@ -35,7 +35,6 @@ class Landmarks extends React.Component {
      }
       
     createFavorite = (attrs) =>{
-        console.log('banana')
         return fetch("/favorites",{
             method: 'POST',
             headers:{
@@ -55,7 +54,6 @@ class Landmarks extends React.Component {
         const { landmarks } = this.state
         const { current_user_id, logged_in } = this.props
         console.log(landmarks)
-        console.log(current_user_id)
             return (
               <React.Fragment>
               
