@@ -27,12 +27,11 @@ class Favorites extends React.Component {
           console.log(favorites)
           this.setState({favorites})
       })
-  }  
+  }
 
   render () {
     const { favorites } = this.state
     const {logged_in } = this.props
-    console.log(favorites)
     if(favorites == undefined){
       return(
         <div>
