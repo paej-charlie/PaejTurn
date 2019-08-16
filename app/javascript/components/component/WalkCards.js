@@ -20,7 +20,6 @@ class WalkCards extends React.Component {
 
   render () {
     const { walk } = this.props
-    console.log('cat')
     return (
       <React.Fragment>
         <Card className="cardComp walksCard" key={walk.id}>

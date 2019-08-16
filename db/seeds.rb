@@ -11,11 +11,11 @@ landmark_attributes = [
         image: "http://webdesignbypm.com/img/William_Heath_Davis_House.jpg",
         description: "The Davis-Horton House (formerly known as the William Heath Davis House) built in 1850, is the oldest standing structure in Downtown San Diego. It serves as the home of the Gaslamp Quarter Historical Foundation (GQHF) and the Gaslamp Museum at the Davis-Horton House.
 
-        Originally, the house was one of several saltbox-style structures shipped from Portland, Maine, to San Diego, which had little wood for construction due to a lack trees along the coast.  
+         Originally, the house was one of several saltbox-style structures shipped from Portland, Maine, to San Diego, which had little wood for construction due to a lack trees along the coast.  
 
-        The houses were intended to comprise the first settlement in what was then called “New Town.” The structures were erected near what is now State and Market Streets near San Diego’s oldest public park, Pantoja Park.
+         The houses were intended to comprise the first settlement in what was then called “New Town.” The structures were erected near what is now State and Market Streets near San Diego’s oldest public park, Pantoja Park.
 
-        In 1873, Anna Scheper purchased the house after it had been moved from State and Market to Eleventh and K Streets. Anna contracted with San Diego County to run the house as the “County Hospital.” She earned $1.00 per patient per day.
+         In 1873, Anna Scheper purchased the house after it had been moved from State and Market to Eleventh and K Streets. Anna contracted with San Diego County to run the house as the “County Hospital.” She earned $1.00 per patient per day.
         
         Today, the Davis-Horton House welcomes thousands of visitors annually.
         History of landmark from https://gaslampfoundation.org/davis-horton-house-168-years-and-still-standing/"
@@ -288,15 +288,17 @@ end
 walk_attributes = [
     {
         name: 'Historical Sites',
-        distance: '2.5 miles',
-        duration: 'About 1.5 hours',
-        alcohol: false
+        distance: '0.4 miles',
+        duration: 'About 7 minutes',
+        alcohol: false,
+        image: 'http://www.sandiegomagazine.com/San-Diego-Magazine/November-2016/Vintage-San-Diego-How-Our-City-Has-Changed-Since-1876/01-la-mesa-1910.jpg'
     },
     {
         name: 'The Booze Cruze',
-        distance: '1.75 miles',
-        duration: '3+ hours',
-        alcohol: true
+        distance: '0.8 miles',
+        duration: 'About 18 minutes',
+        alcohol: true,
+        image: 'https://live.staticflickr.com/6010/5939454382_f83d21f5df_b.jpg'
     }
 ]
     
