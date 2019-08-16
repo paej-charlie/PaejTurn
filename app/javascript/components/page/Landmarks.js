@@ -30,7 +30,6 @@ class Landmarks extends React.Component {
             return response.json()
         })
         .then( favorites => {
-            console.log(favorites)
             this.setState({favorites})
         })
      }
@@ -56,6 +55,7 @@ class Landmarks extends React.Component {
         const { landmarks } = this.state
         const { current_user_id, logged_in } = this.props
         console.log(landmarks)
+        console.log(current_user_id)
             return (
               <React.Fragment>
               
