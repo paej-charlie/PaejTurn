@@ -54,6 +54,7 @@ class MainApp extends React.Component {
             <Route path="/User/:id" 
               render={(props) =>
                 <Favorites 
+                  {...props}
                   current_user_id = { current_user_id }
                   logged_in = { logged_in }
                 />

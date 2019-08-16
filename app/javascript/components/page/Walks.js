@@ -25,7 +25,11 @@ class Walks extends React.Component {
         const { walks } = this.state
             return (
               <React.Fragment>
+              
+              <div className = "banner-gt">
               <h1>Guided Tours</h1>
+              </div>
+              
               <div className="landmarksWalks">
               {walks.map((walk) => {
                 return (

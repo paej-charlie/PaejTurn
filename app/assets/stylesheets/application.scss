@@ -22,14 +22,21 @@
     height: 300px;
     background-image: url(https://images.unsplash.com/photo-1461183479101-6c14cd5299c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
 }
+
+.navbar {
+  font-family: 'Pacifico', cursive;
+  font-size: 22px;
+}
+
 h1 {
   margin: 20px;
   text-align: center;
 }
 
 h2 {
-  margin: 20px;
   text-align: center;
+  justify-content: center;
+  margin: 20px;
 }
 
 .app-uses {
@@ -146,13 +153,8 @@ img {
   width: 400px;
   min-height: 650px;
 }
-.landmarksWalks .cardComp img {
-  width: 400px;
-  height: 350px;
-}
-//TODO change the above style once all pictures are resized in the database
 .textHide {
-  height: 150px;
+  height: 200px;
   overflow: hidden;
 }
 .cardComp .card-text{
@@ -258,4 +260,70 @@ img {
 
 .headshot-j:hover {
   background-image: url(https://i2.wp.com/hawaiianshirtdude.com/wp-content/uploads/2018/05/tom-selleck-final-1.jpg?resize=200%2C200&ssl=1);
+}
+
+.banner {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url(https://lh3.googleusercontent.com/sYDXx7zVrm-5kYo_aMREYFA76mRpkxthlgjxkPYJwwVlhwGgu80T1ZIKb6vho1OnLAG-pBQ0AbOvIoN3Aup130jGHbSUDadXm7E=w2500-h1250-rw-no);
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.banner h2 {
+  font-size: 100px;
+}
+
+.banner-lm {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url(https://lh3.googleusercontent.com/sYDXx7zVrm-5kYo_aMREYFA76mRpkxthlgjxkPYJwwVlhwGgu80T1ZIKb6vho1OnLAG-pBQ0AbOvIoN3Aup130jGHbSUDadXm7E=w2500-h1250-rw-no);
+  width: 100%;
+  height: 400px;
+}
+
+.banner-lm h1 {
+  font-size: 100px;
+}
+
+.banner-gt {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url(https://lh3.googleusercontent.com/sYDXx7zVrm-5kYo_aMREYFA76mRpkxthlgjxkPYJwwVlhwGgu80T1ZIKb6vho1OnLAG-pBQ0AbOvIoN3Aup130jGHbSUDadXm7E=w2500-h1250-rw-no);
+  width: 100%;
+  height: 400px;
+}
+
+.banner-gt h1 {
+  font-size: 100px;
+}
+
+.banner-f {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url(https://lh3.googleusercontent.com/sYDXx7zVrm-5kYo_aMREYFA76mRpkxthlgjxkPYJwwVlhwGgu80T1ZIKb6vho1OnLAG-pBQ0AbOvIoN3Aup130jGHbSUDadXm7E=w2500-h1250-rw-no);
+  width: 100%;
+  height: 400px;
+}
+
+.banner-f h1 {
+  font-size: 100px;
 }

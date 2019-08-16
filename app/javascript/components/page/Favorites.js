@@ -27,12 +27,11 @@ class Favorites extends React.Component {
           console.log(favorites)
           this.setState({favorites})
       })
-  }  
+  }
 
   render () {
     const { favorites } = this.state
     const {logged_in } = this.props
-    console.log(favorites)
     if(favorites == undefined){
       return(
         <div>
@@ -42,7 +41,11 @@ class Favorites extends React.Component {
     }
     return (
       <React.Fragment>
+      
+        <div className = "banner-f">
         <h1>My Favorite Places</h1>
+        </div>
+        
         <div className="landmarksWalks">
         {favorites.landmarks.map((favorite, index) => {
           return(
