@@ -37,12 +37,40 @@ h2 {
   text-align: center;
   justify-content: center;
   margin: 20px;
+  font-family: 'Cabin', sans-serif;
+}
+
+h3 {
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+  font-family: 'Cabin', sans-serif;
 }
 
 .app-uses {
   margin: auto;
   text-align: center;
   list-style-position: inside;
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  width: 800px;
+  word-wrap: break-word;
+}
+
+.app-uses-li {
+  background: url(https://static.getjar.com/icon-50x50/41/862398_thm.png) no-repeat left; /* <-- change `left` & `top` too for extra control */
+  padding: 10px 10px 10px 10px;
+  /* reset styles (optional): */
+  list-style: none;
+  margin: 10px;
+}
+
+.fun-facts {
+  text-align: left;
+  font-family: 'Cabin', sans-serif;
+  width: 700px;
+  margin: auto;
+  word-wrap: break-word;
 }
 
 .leaflet-container {
@@ -180,6 +208,7 @@ img {
 
 .carousel {
   margin: auto;
+  font-family: 'Cabin', sans-serif;
 }
 
 @media (max-width: 2000px) {
