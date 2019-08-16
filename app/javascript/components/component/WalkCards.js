@@ -28,7 +28,7 @@ class WalkCards extends React.Component {
         <CardBody>
         <img class="cardImg" src="http://placekitten.com/400/350" alt="Card image cap" />
           <CardText>Distance: {walk.distance} <br /> Duration: {walk.duration}</CardText>
-          <a className="btn btn-primary walkBtn" href={`https://2082ac348b8a4bf4abf95c48546ecb63.vfs.cloud9.us-west-2.amazonaws.com/Walk/${walk.id}`}>Start Walk</a>
+          <a className="btn btn-primary walkBtn" href={walk.image}>Start Walk</a>
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="dropDown">
               <DropdownToggle caret>
                 More Info
