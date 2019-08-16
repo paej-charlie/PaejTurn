@@ -22,10 +22,10 @@ class WalkCards extends React.Component {
     const { walk } = this.props
     return (
       <React.Fragment>
-        <Card className="cardComp" key={walk.id}>
+        <Card className="cardComp walksCard" key={walk.id}>
         <CardHeader>{walk.name}</CardHeader>
         <CardBody>
-        <img class="cardImg" src="http://placekitten.com/400/350" alt="Card image cap" />
+        <img class="cardImg" src={walk.image} alt="Card image cap" />
           <CardText>Distance: {walk.distance} <br /> Duration: {walk.duration}</CardText>
           <a className="btn btn-primary walkBtn" href={`https://2082ac348b8a4bf4abf95c48546ecb63.vfs.cloud9.us-west-2.amazonaws.com/Walk/${walk.id}`}>Start Walk</a>
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="dropDown">

@@ -14,7 +14,7 @@
 
   it('NavBar has a link to HiM - Home', ()=>{
     const app = mount(<Header />)
-    expect(app.find('NavbarBrand').first().text()).toEqual('HiM')
+    expect(app.find('NavbarBrand').first().text()).toEqual('History in Motion')
   })
   
   it('NavBar has a link to Landmarks', ()=>{
