@@ -19,7 +19,6 @@ class Landmarks extends React.Component {
             return response.json()
         })
         .then( landmarks => {
-            console.log('split')
             this.setState({landmarks})
         })
     }
