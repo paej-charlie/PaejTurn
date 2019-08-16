@@ -16,6 +16,11 @@ import {
 
     const items = [
       {
+        src: "https://www.theinternettraveller.com/images/san_diego_2000x600",
+        altText: 'Sunset Cliffs, San Diego',
+        caption: 'Sunset Cliffs, San Diego'
+      },
+      {
         src: "https://www.thebristolsandiego.com/resourcefiles/mainimages/bhsd-gaslamp_1.jpg",
         altText: 'Gaslamp Quarter',
         caption: 'Gaslamp Quarter'
@@ -24,11 +29,6 @@ import {
         src: "https://www.thebristolsandiego.com/resourcefiles/mainimages/location-of-san-diego-hotel-california-top.jpg",
         altText: 'Downtown San Diego',
         caption: 'Downtown San Diego'
-      },
-      {
-        src: "https://www.theinternettraveller.com/images/san_diego_2000x600",
-        altText: 'Sunset Cliffs, San Diego',
-        caption: 'Sunset Cliffs, San Diego'
       },
       {
         src: "https://www.empress-hotel.com/resourcefiles/mainimages/spring-in-la-jolla-san-diego_1.jpg",
@@ -109,15 +109,17 @@ class Home extends React.Component {
           <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
         </Carousel>
         
-        <h1>Mission Statement/Tagline</h1>
+        <h2>History in Motion is a guided walking tour app with walks around downtown San Diego, California. Whether you want to checkout some historic bars, buildings, or places in history this is the app for you!</h2>
         
         <ul className = "app-uses">
-          <li>App uses here</li>
-          <li>App uses here</li>
-          <li>App uses here</li>
+          <li>Curated walking tours with options for alcohol or no alcohol on your walk</li>
+          <li>Map with waypoints of specific locations on walks</li>
+          <li>Historic details of each location</li>
         </ul>
         
+        <div className = "banner">
         <h2>About Us</h2>
+        </div>
         
         <div className="about-us">
         <Card className="cardComp">

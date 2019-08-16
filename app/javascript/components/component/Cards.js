@@ -9,9 +9,7 @@ class Cards extends React.Component {
       this.toggle = this.toggle.bind(this);
       this.state = {
         dropdownOpen: false,
-        liked: 'Like',
-        textHideShow: 'textHide',
-        textStatus: 'Read more'
+        liked: 'Like'
       };
   }
   
@@ -34,19 +32,10 @@ class Cards extends React.Component {
       this.setState({liked: 'Like'})
     }
   }
-  
-  changeText = () => {
-    const { textHideShow, textStatus } = this.state
-    if(textHideShow === "textHide"){
-      this.setState({textHideShow: '', textStatus: "Read less"})
-    } else {
-      this.setState({textHideShow: 'textHide', textStatus: "Read more"})
-    }
-  }
-  
+
+
   render () {
-    const { landmark, favorites, logged_in } = this.props
-    const { textHideShow, textStatus } = this.state
+    const { landmark, logged_in } = this.props
     return (
       <React.Fragment>
         <Card className="cardComp">
@@ -58,15 +47,14 @@ class Cards extends React.Component {
         }
         <CardBody>
         <img className="cardImg" src={landmark.image} alt="Card image cap" />
-          <CardText className={textHideShow}>{landmark.description} </CardText>
-          <Button className="btn-primary landmarkBtn readMoreBtn" onClick={this.changeText}>{textStatus}</Button>
+          <CardText>Located at {landmark.address}, {landmark.city}, {landmark.state} {landmark.zip}.</CardText>
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="dropDown">
               <DropdownToggle caret>
-                Fast Facts
+                More Info
               </DropdownToggle>
               <DropdownMenu className="dropDown">
                 <p>Alcohol: {landmark.alcohol ? 'This landmark offers alcohol' : 'No alcohol at this landmark'}</p>
-                <p>Located at {landmark.address}, {landmark.city}, {landmark.state} {landmark.zip}</p>
+                <p>Description: {landmark.description}</p>
               </DropdownMenu>
             </Dropdown>
         </CardBody>

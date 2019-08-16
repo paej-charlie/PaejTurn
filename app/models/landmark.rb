@@ -6,4 +6,6 @@ class Landmark < ApplicationRecord
         
     validates_uniqueness_of :title
     validates :latitude, :longitude, presence: true
+    
+    attr_accessor :is_favorite
 end

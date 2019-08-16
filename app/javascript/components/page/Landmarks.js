@@ -43,6 +43,7 @@ class Landmarks extends React.Component {
             body: JSON.stringify({favorite: attrs})
         })
         .then(response => {
+            console.log(response)
             if(response.status === 201){
                 this.getFavorites()
             }
@@ -50,16 +51,20 @@ class Landmarks extends React.Component {
     }
     
     render () {
-        const { landmarks, favorites } = this.state
+        const { landmarks } = this.state
         const { current_user_id, logged_in } = this.props
-        console.log(favorites)
+        console.log(landmarks)
             return (
               <React.Fragment>
+              
+              <div className = "banner-lm">
               <h1>Landmarks</h1>
+              </div>
+              
               <div className="landmarksWalks">
               {landmarks.map((landmark) => {
                 return (
-                    <Cards key={landmark.id} 
+                    <Cards key={landmark.title} 
                         landmark = { landmark } 
                         current_user_id = { current_user_id } 
                         logged_in = { logged_in }
