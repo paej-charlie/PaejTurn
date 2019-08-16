@@ -19,7 +19,22 @@ class Landmarks extends React.Component {
             return response.json()
         })
         .then( landmarks => {
-            
+            // landmarks = response.map((landmark) => {
+            //     {
+            //         id: landmark.id
+            //         title: landmark.title
+            //         address: landmark.address
+            //         city: landmark.city
+            //         state: landmark.state
+            //         zip: landmark.zip
+            //         description: landmark.description
+            //         alcohol: landmark.alcohol
+            //         latitude: landmark.latitude
+            //         longitude: landmark.longitude
+            //         image: landmark.image
+                    
+            //     }
+            // })
             this.setState({landmarks})
         })
     }
@@ -31,11 +46,13 @@ class Landmarks extends React.Component {
             return response.json()
         })
         .then( favorites => {
+            console.log(favorites)
             this.setState({favorites})
         })
      }
       
     createFavorite = (attrs) =>{
+        console.log('banana')
         return fetch("/favorites",{
             method: 'POST',
             headers:{
@@ -44,6 +61,7 @@ class Landmarks extends React.Component {
             body: JSON.stringify({favorite: attrs})
         })
         .then(response => {
+            console.log(response)
             if(response.status === 201){
                 this.getFavorites()
             }
