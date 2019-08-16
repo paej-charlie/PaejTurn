@@ -14,6 +14,6 @@
 
   it('Favorites has a header "favorites"', ()=>{
     const app = mount(<Favorites />)
-    expect(app.find('h1').first().text()).toEqual('Favorites')
+    expect(app.find('h1').first().text()).toEqual('My Favorite Places')
   })
   

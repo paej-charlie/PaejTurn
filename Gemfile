@@ -65,3 +65,7 @@ gem "bootstrap", "~> 4.3"
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
 end
+
+group :development do
+  gem 'rails_real_favicon'
+end
