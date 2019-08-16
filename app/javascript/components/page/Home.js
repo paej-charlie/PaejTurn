@@ -134,7 +134,7 @@ class Home extends React.Component {
           <CardHeader>Amanda MacGregor</CardHeader>
             <CardBody>
               <div className="headshot-a"></div>
-              <CardText>About Amanda:</CardText>
+              <CardText>Currently taking advantage of San Diego opportunities by engaging in a full-stack development bootcamp. I'm interested in bringing my accounting background and development skills together into a unique and powerful skillset. New(ish) to the San Diego area from Madison, WI and before then, Northern Colorado. </CardText>
             </CardBody>
         </Card>
         
