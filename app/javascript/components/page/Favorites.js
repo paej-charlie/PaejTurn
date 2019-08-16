@@ -58,7 +58,11 @@ class Favorites extends React.Component {
     }
     return (
       <React.Fragment>
+      
+        <div className = "banner-f">
         <h1>My Favorite Places</h1>
+        </div>
+        
         <div className="landmarksWalks">
         {favorites.landmarks.map((favorite, index) => {
           return(
