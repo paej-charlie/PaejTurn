@@ -8,7 +8,7 @@ History in Motion was the capstone project from Team PAEJ in the 2019 Charlie co
 MVP is met - we wanted to have a home page with an about section, a carousel of images, linke to the landmarks in our database, the ability to sign up/log in/log out, and when logged in view teo 'curated walks' - one for landmarks, one for speakeasies.  Currently in process is the Favorite functionality - logged-in users can 'Like' a landmark to save for later, then access in a Favorites page.  Functionality for unlike/Like to stay liked when the user leaves and returns to the page are in process, ice-box and may be removed in final product.
  
 ## Screenshots
-![Image of Logo]('./javascript/map-img.png')
+TODO
 
 ## Tech/framework used
 
