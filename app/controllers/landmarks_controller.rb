@@ -2,7 +2,6 @@ class LandmarksController < ApplicationController
     before_action :authenticate_user!, only: [:show ]
     
     def index 
-        
         if current_user
             @landmarks = Landmark.includes(:favorites)
             @landmarks.each do |landmark|

@@ -50,9 +50,9 @@ class MapView extends React.Component {
       <div className="mapView">
       <div className="map">
       <LeafletMap
-        center={[32.8, -117]}
-        zoom={6}
-        maxZoom={10}
+        center={[32.71345, -117.1595]}
+        zoom={16}
+        maxZoom={22}
         attributionControl={true}
         zoomControl={true}
         doubleClickZoom={true}
