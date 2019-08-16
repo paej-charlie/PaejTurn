@@ -23,7 +23,7 @@ class WalkCards extends React.Component {
     console.log('cat')
     return (
       <React.Fragment>
-        <Card className="cardComp" key={walk.id}>
+        <Card className="cardComp walksCard" key={walk.id}>
         <CardHeader>{walk.name}</CardHeader>
         <CardBody>
         <img class="cardImg" src="http://placekitten.com/400/350" alt="Card image cap" />
