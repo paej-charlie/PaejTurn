@@ -2,13 +2,13 @@
 History in Motion is a guided walking tour app with walks around downtown San Diego, California. Whether you want to checkout some historic bars, buildings, or places in history this is the app for you!
 
 ## Motivation
-History in Motion was the capstone project from Team PAEJ in the 2019 Charlie cohort at LEARN Academy.
+History in Motion was the capstone project from Team PAEJ in the 2019 Charlie cohort at LEARN Academy. No one in the group is native to San Diego, and we saw this as a good opportunity to learn more about what San Diego used to be, all in one place and accessible as we're walking around exploring the city.
 
 ## Build status
-Currenlty in development 
+MVP is met - we wanted to have a home page with an about section, a carousel of images, linke to the landmarks in our database, the ability to sign up/log in/log out, and when logged in view teo 'curated walks' - one for landmarks, one for speakeasies.  Currently in process is the Favorite functionality - logged-in users can 'Like' a landmark to save for later, then access in a Favorites page.  Functionality for unlike/Like to stay liked when the user leaves and returns to the page are in process, ice-box and may be removed in final product.
  
 ## Screenshots
-Include logo/demo screenshot etc.
+![Image of Logo]('./javascript/map-img.png')
 
 ## Tech/framework used
 
@@ -19,6 +19,15 @@ Include logo/demo screenshot etc.
 
 ## Features
 What makes your project stand out?
+There is a home page with a carousel of images of San Diego at it's best.  Scrolling down, there are some quick bulletpoints detailing how this app is useful, some quick historical facts about the city, and an About Us section. 
+
+There is a navigation bar that linkes to various pages - Walks and Favorites are hidden until the user is signed up/signed in. 
+
+The Landmarks page contains cards for each waypoint - location, photo, and history/detail. Following the trend of history, the last few landmarks are local speakeasies - bars where you can get a feel of the past.
+
+The Walks page contains two walks; one is all historical markers within the same few blocks, and another with all speakeasies - also within the Gaslamp district.
+
+The header (with links to all pages) and footer are present on all pages.
 
 ## Code Example
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
@@ -74,7 +83,11 @@ The following is an example of testing done for React components.  In this case,
  ```
 
 ## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
+
+1. Check out the home page - fun facts about the city (and the dev team) are here.
+2. Navigate to the Landmarks page; peruse and decide if you see a few you'd like to have easy access to next time you're out and about.
+3. Create an account!  Once you're logged in, you have access to Like landmarks of your choosing. Once liked, you will find that landmark in the Favorites page for easy access.
+4. Also once logged in, you have access to 'curated walks' - we've taken all landmarks and broken them out into two distinct walks.  One for historical sites, and another for a speakeasy crawl.
 
 ## Credits
 - [Paige MacGregor](https://github.com/paigem33)
