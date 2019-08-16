@@ -288,15 +288,17 @@ end
 walk_attributes = [
     {
         name: 'Historical Sites',
-        distance: '2.5 miles',
-        duration: 'About 1.5 hours',
-        alcohol: false
+        distance: '0.4 miles',
+        duration: 'About 7 minutes',
+        alcohol: false,
+        image: 'http://www.sandiegomagazine.com/San-Diego-Magazine/November-2016/Vintage-San-Diego-How-Our-City-Has-Changed-Since-1876/01-la-mesa-1910.jpg'
     },
     {
         name: 'The Booze Cruze',
-        distance: '1.75 miles',
-        duration: '3+ hours',
-        alcohol: true
+        distance: '0.8 miles',
+        duration: 'About 18 minutes',
+        alcohol: true,
+        image: 'https://live.staticflickr.com/6010/5939454382_f83d21f5df_b.jpg'
     }
 ]
     
