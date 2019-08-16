@@ -43,9 +43,9 @@ class Landmarks extends React.Component {
             body: JSON.stringify({favorite: attrs})
         })
         .then(response => {
-            console.log(response)
             if(response.status === 201){
-                this.getFavorites()
+                console.log('banana')
+                this.getLandmarks()
             }
         })
     }
@@ -53,7 +53,6 @@ class Landmarks extends React.Component {
     render () {
         const { landmarks } = this.state
         const { current_user_id, logged_in } = this.props
-        console.log(landmarks)
             return (
               <React.Fragment>
               

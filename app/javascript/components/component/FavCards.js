@@ -9,54 +9,15 @@ class Cards extends React.Component {
       this.toggle = this.toggle.bind(this);
       this.state = {
         dropdownOpen: false,
-        liked: 'Like',
         textHideShow: 'textHide',
         textStatus: 'Read more'
       };
     }
   
-  componentDidMount(){
-    const{ landmark } = this.props
-    let liked  = ''
-    
-    if(landmark.is_favorite === true){
-        liked = 'liked'
-      } 
-    else if(landmark.is_favorite === false){
-        liked = 'like'
-    }
-      this.setState({liked})
-  }
-  
-  componentDidUpdate(prevProps){
-    const prevLandmark = prevProps.landmark.is_favorite
-    const{ landmark } = this.props
-    let liked  = ''
-    
-    if(landmark.is_favorite != prevLandmark){
-      if(landmark.is_favorite === true){
-        liked = 'liked'
-      } 
-      else if(landmark.is_favorite === false){
-        liked = 'like'
-      }
-      this.setState({liked})
-    }
-  }
-  
-   toggle() {
+  toggle() {
     this.setState(prevState => ({
       dropdownOpen: !prevState.dropdownOpen
     }));
-  }
-  
-  likeClick = () => {
-    const { liked } = this.state
-    const { landmark, createFavorite } = this.props
-    const form = {
-      landmark_id: landmark.id
-    }
-    createFavorite(form)
   }
   
   changeText = () => {
@@ -74,12 +35,7 @@ class Cards extends React.Component {
     return (
       <React.Fragment>
         <Card className="cardComp">
-        {logged_in &&
-          <CardHeader>{landmark.title} <Button onClick={this.likeClick} className="likeIcon" outline color="danger">{ this.state.liked }</Button></CardHeader>
-        }
-        {!logged_in &&
-           <CardHeader>{landmark.title}</CardHeader>
-        }
+        <CardHeader>{landmark.title} <Button onClick={()=> this.props.deleteFavorite(landmark.id)} className="likeIcon" outline color="danger">X</Button></CardHeader>
         <CardBody>
         <img className="cardImg" src={landmark.image} alt="Card image cap" />
           <CardText className={textHideShow}>{landmark.description} </CardText>

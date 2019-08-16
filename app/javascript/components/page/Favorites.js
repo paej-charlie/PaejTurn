@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Card, CardHeader, CardImg, CardBody, CardTitle, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import Cards from '../component/Cards'
+import FavCards from '../component/FavCards'
 
 class Favorites extends React.Component {
   constructor(props){
@@ -28,6 +28,23 @@ class Favorites extends React.Component {
           this.setState({favorites})
       })
   }
+  
+  deleteFavorite = (id) =>{
+    const { current_user_id } = this.props
+    return fetch(`/favorites/${id}`, {
+        method: 'DELETE'
+      }
+    ).then(response => {
+      if(response.status === 200){
+        this.getFavorites(current_user_id)
+      }else{
+        response.json()
+        .then(payload => {
+          this.setState({error: payload.error})
+        })
+      }
+    })
+  }
 
   render () {
     const { favorites } = this.state
@@ -49,9 +66,10 @@ class Favorites extends React.Component {
         <div className="landmarksWalks">
         {favorites.landmarks.map((favorite, index) => {
           return(
-            <Cards key={favorite.id} 
+            <FavCards key={favorite.id} 
               landmark = { favorite }  
               logged_in = { logged_in }
+              deleteFavorite = { this.deleteFavorite }
             />
           )
         })}
