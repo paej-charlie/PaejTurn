@@ -11,11 +11,11 @@ landmark_attributes = [
         image: "https://en.wikipedia.org/wiki/File:William_Heath_Davis_House_1850.jpg",
         description: "The Davis-Horton House (formerly known as the William Heath Davis House) built in 1850, is the oldest standing structure in Downtown San Diego. It serves as the home of the Gaslamp Quarter Historical Foundation (GQHF) and the Gaslamp Museum at the Davis-Horton House.
 
-        Originally, the house was one of several saltbox-style structures shipped from Portland, Maine, to San Diego, which had little wood for construction due to a lack trees along the coast.  
+         Originally, the house was one of several saltbox-style structures shipped from Portland, Maine, to San Diego, which had little wood for construction due to a lack trees along the coast.  
 
-        The houses were intended to comprise the first settlement in what was then called “New Town.” The structures were erected near what is now State and Market Streets near San Diego’s oldest public park, Pantoja Park.
+         The houses were intended to comprise the first settlement in what was then called “New Town.” The structures were erected near what is now State and Market Streets near San Diego’s oldest public park, Pantoja Park.
 
-        In 1873, Anna Scheper purchased the house after it had been moved from State and Market to Eleventh and K Streets. Anna contracted with San Diego County to run the house as the “County Hospital.” She earned $1.00 per patient per day.
+         In 1873, Anna Scheper purchased the house after it had been moved from State and Market to Eleventh and K Streets. Anna contracted with San Diego County to run the house as the “County Hospital.” She earned $1.00 per patient per day.
         
         Today, the Davis-Horton House welcomes thousands of visitors annually.
         History of landmark from https://gaslampfoundation.org/davis-horton-house-168-years-and-still-standing/"
