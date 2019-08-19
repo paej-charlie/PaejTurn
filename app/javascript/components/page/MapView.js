@@ -70,7 +70,8 @@ class MapView extends React.Component {
               return (
                   <Marker key={index} position={[lat, long]}>
                     <Popup>
-                      {marker.title}
+                      <div><strong>{marker.title}</strong></div>
+                      <div>{marker.address}, {marker.city}, {marker.state} {marker.zip}</div>
                     </Popup>
                   </Marker>
                 )

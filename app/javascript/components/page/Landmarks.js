@@ -44,7 +44,6 @@ class Landmarks extends React.Component {
         })
         .then(response => {
             if(response.status === 201){
-                console.log('banana')
                 this.getLandmarks()
             }
         })
