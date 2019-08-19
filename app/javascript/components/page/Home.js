@@ -141,7 +141,16 @@ class Home extends React.Component {
           <CardHeader>Paige MacGregor</CardHeader>
             <CardBody>
               <div className = "headshot-p"></div>
-              <CardText>Enjoys writing code, fiber arts, and playing with her cat.</CardText>
+                <p className = "links">
+                  <a href = "https://www.linkedin.com/in/paige-macgregor/" target = "_blank">
+                    <img src = "https://www.portafina.co.uk/wp-content/uploads/2018/10/icon_linkedin.png" alt = "Paige's LinkedIn"></img>
+                  </a>
+                  <a href = "https://github.com/paigem33" target = "_blank">
+                    <img src = "https://llp.berkeley.edu/wp-content/uploads/2018/01/github-e1516824281561.png" alt = "Paige's GitHub"></img>
+                  </a>
+                </p>
+                <hr></hr>
+              <CardText>I enjoy working on code, quilting, hand embroidery, and playing with my cat. It was amazing working on this project since San Diego's history is so fascinating!</CardText>
             </CardBody>
         </Card>
         
@@ -149,6 +158,15 @@ class Home extends React.Component {
           <CardHeader>Amanda MacGregor</CardHeader>
             <CardBody>
               <div className="headshot-a"></div>
+                <p className = "links">
+                  <a href = "https://www.linkedin.com/in/amandamacgregor2018/" target = "_blank">
+                    <img src = "https://www.portafina.co.uk/wp-content/uploads/2018/10/icon_linkedin.png" alt = "Amanda's LinkedIn"></img>
+                  </a>
+                  <a href = "https://github.com/amandamacgregor" target = "_blank">
+                    <img src = "https://llp.berkeley.edu/wp-content/uploads/2018/01/github-e1516824281561.png" alt = "Amanda's GitHub"></img>
+                  </a>
+                </p>
+                <hr></hr>
               <CardText>Currently taking advantage of San Diego opportunities by engaging in a full-stack development bootcamp. I'm interested in bringing my accounting background and development skills together into a unique and powerful skillset. New(ish) to the San Diego area from Madison, WI and before then, Northern Colorado. </CardText>
             </CardBody>
         </Card>
@@ -157,7 +175,16 @@ class Home extends React.Component {
           <CardHeader>Evan Katz</CardHeader>
             <CardBody>
               <div className = "headshot-e"></div>
-              <CardText>About Evan:</CardText>
+                <p className = "links">
+                  <a href = "https://www.linkedin.com/in/evan-katz-7b4aa397/" target = "_blank">
+                    <img src = "https://www.portafina.co.uk/wp-content/uploads/2018/10/icon_linkedin.png" alt = "Evan's LinkedIn"></img>
+                  </a>
+                  <a href = "https://github.com/evankatz14" target = "_blank">
+                    <img src = "https://llp.berkeley.edu/wp-content/uploads/2018/01/github-e1516824281561.png" alt = "Evan's GitHub"></img>
+                  </a>
+                </p>
+                <hr></hr>
+              <CardText>A Chicago transplant, I am still getting used to the hot sun and consistent weather of beautiful San Diego.  This app is the perfect tool for someone like me who wants to get out and explore my new city.  I am an adventurous guy looking to find hidden gems, great food, and great adventures whenever I get the chance.</CardText>
             </CardBody>
         </Card>
         
@@ -165,6 +192,15 @@ class Home extends React.Component {
           <CardHeader>Jared Lemke</CardHeader>
             <CardBody>
               <div className = "headshot-j"></div>
+                <p className = "links">
+                  <a href = "https://www.linkedin.com/in/jaredlemke/" target = "_blank">
+                    <img src = "https://www.portafina.co.uk/wp-content/uploads/2018/10/icon_linkedin.png" alt = "Jared's LinkedIn"></img>
+                  </a>
+                  <a href = "https://github.com/JL347" target = "_blank">
+                    <img src = "https://llp.berkeley.edu/wp-content/uploads/2018/01/github-e1516824281561.png" alt = "Jared's GitHub"></img>
+                  </a>
+                </p>
+                <hr></hr>
               <CardText>After working in the recruiting/staffing industry for 5 years, I'm looking to make the change into development while using my strong time management and organizational skills. I'm an active person with strong interests in sports and the great outdoors.</CardText>
             </CardBody>
         </Card>

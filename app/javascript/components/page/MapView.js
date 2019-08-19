@@ -85,14 +85,6 @@ class MapView extends React.Component {
           ) 
       })}
       </ul>
-      <h2>Directions:</h2>
-      <ul className="list-group list-group-flush mapUl">
-        <li className="list-group-item">Direction</li>
-        <li className="list-group-item">Direction</li>
-        <li className="list-group-item">Direction</li>
-        <li className="list-group-item">Direction</li>
-        <li className="list-group-item">Direction</li>
-      </ul>
       </div>
     );
   }
