@@ -12,8 +12,8 @@ class FavoritesController < ApplicationController
     end 
     
     def destroy
-        @favorite = current_user.favorites.find params[:id]
-        if @favorite.destroy
+        @favorite = current_user.favorites.where(landmark_id: params[:id]).first
+        if @favorite && @favorite.destroy
             render json: @favorite
         else
             render json: {error: 'could not destroy'}, status: 400
