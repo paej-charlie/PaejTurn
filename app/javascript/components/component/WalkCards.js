@@ -34,7 +34,6 @@ class WalkCards extends React.Component {
               </DropdownToggle>
               <DropdownMenu className="dropDown">
                 <p>Alcohol: {walk.alcohol ? 'This walk has alcohol' : 'No alcohol on this walk'}</p>
-                <p>Number of landmarks?</p>
               </DropdownMenu>
             </Dropdown>
         </CardBody>
