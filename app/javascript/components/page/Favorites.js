@@ -20,11 +20,9 @@ class Favorites extends React.Component {
       const { favorites } = this.state
       fetch(`/users/${id}`)
       .then( response => {
-          console.log(response)
           return response.json()
       })
       .then( favorites => {
-          console.log(favorites)
           this.setState({favorites})
       })
   }
