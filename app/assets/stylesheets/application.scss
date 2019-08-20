@@ -303,7 +303,7 @@ img {
   justify-content: center;
   align-items: center;
   display: flex;
-  background-image: url(https://i2.wp.com/hawaiianshirtdude.com/wp-content/uploads/2018/05/tom-selleck-final-1.jpg?resize=200%2C200&ssl=1);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Sandiego_skyline_from_coronado.jpg);
   width: 100%;
   height: 400px;
   margin-top: 20px;
@@ -327,7 +327,7 @@ img {
   justify-content: center;
   align-items: center;
   display: flex;
-  background-image: url(https://lh3.googleusercontent.com/sYDXx7zVrm-5kYo_aMREYFA76mRpkxthlgjxkPYJwwVlhwGgu80T1ZIKb6vho1OnLAG-pBQ0AbOvIoN3Aup130jGHbSUDadXm7E=w2500-h1250-rw-no);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Sandiego_skyline_from_coronado.jpg);
   width: 100%;
   height: 400px;
   margin-bottom: 30px;
@@ -337,6 +337,12 @@ img {
   font-size: 75px;
 }
 
+@media (min-width: 500px) {
+  .banner-lm h1 {
+    font-size: 100px;
+  }
+}
+
 .banner-gt {
   font-family: 'Pacifico', cursive;
   color: white;
@@ -344,7 +350,7 @@ img {
   justify-content: center;
   align-items: center;
   display: flex;
-  background-image: url(https://lh3.googleusercontent.com/sYDXx7zVrm-5kYo_aMREYFA76mRpkxthlgjxkPYJwwVlhwGgu80T1ZIKb6vho1OnLAG-pBQ0AbOvIoN3Aup130jGHbSUDadXm7E=w2500-h1250-rw-no);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Sandiego_skyline_from_coronado.jpg);
   width: 100%;
   height: 400px;
   margin-bottom: 30px;
@@ -354,6 +360,12 @@ img {
   font-size: 75px;
 }
 
+@media (min-width: 500px) {
+  .banner-gt h1 {
+    font-size: 100px;
+  }
+}
+
 .banner-f {
   font-family: 'Pacifico', cursive;
   color: white;
@@ -361,7 +373,7 @@ img {
   justify-content: center;
   align-items: center;
   display: flex;
-  background-image: url(https://lh3.googleusercontent.com/sYDXx7zVrm-5kYo_aMREYFA76mRpkxthlgjxkPYJwwVlhwGgu80T1ZIKb6vho1OnLAG-pBQ0AbOvIoN3Aup130jGHbSUDadXm7E=w2500-h1250-rw-no);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Sandiego_skyline_from_coronado.jpg);
   width: 100%;
   height: 400px;
   margin-bottom: 30px;
@@ -369,6 +381,12 @@ img {
 
 .banner-f h1 {
   font-size: 75px;
+}
+
+@media (min-width: 500px) {
+  .banner-f h1 {
+    font-size: 100px;
+  }
 }
 
 .links {
