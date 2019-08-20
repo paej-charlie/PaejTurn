@@ -75,5 +75,5 @@ test:
 # You can use this database configuration with:
 #
 production:
-  url: <%= ENV['postgresql-asymmetrical-85929'] %>
+  url: <%= ENV['postgresql-angular-43323'] %>
 
